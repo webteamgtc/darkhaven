@@ -19,9 +19,9 @@ const credentials = [
 
 export default function WhoWeAre() {
   return (
-    <section id="about" className="relative py-24 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section id="about" className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-start">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ export default function WhoWeAre() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-6 text-text-dark leading-[1.15]"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark leading-[1.15]"
             >
               Built on <span className="shimmer-blue">Precision</span>,<br />Driven by Trust
             </motion.h2>
@@ -45,7 +45,7 @@ export default function WhoWeAre() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-text-dark-2 text-lg leading-relaxed mb-6"
+              className="text-text-dark-2 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6"
             >
               DrakHaven is an institutional-grade financial infrastructure provider
               delivering deep liquidity, cutting-edge technology, and robust compliance
@@ -57,7 +57,7 @@ export default function WhoWeAre() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-text-dark-3 leading-relaxed mb-8"
+              className="text-text-dark-3 text-sm leading-relaxed mb-6 sm:mb-8"
             >
               Founded in 2012, we&apos;ve grown from a London-based liquidity provider
               to a global infrastructure platform trusted by 350+ institutional

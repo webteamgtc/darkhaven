@@ -43,26 +43,26 @@ const values = [
 
 export default function OurValues() {
   return (
-    <section id="values" className="relative py-24 md:py-32 bg-light overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="values" className="relative py-16 sm:py-24 md:py-32 bg-light overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-sm font-medium text-gold-dark uppercase tracking-widest">Our Values</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-6 text-text-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
             The Pillars of <span className="shimmer-gold">Conviction</span>
           </h2>
-          <p className="text-text-dark-3 text-lg max-w-2xl mx-auto">
+          <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">
             Four foundational principles that guide every decision, every solution,
             and every relationship we build.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {values.map((value, index) => (
             <motion.div
               key={index}
@@ -70,7 +70,7 @@ export default function OurValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 border border-black/[0.04] hover:border-gold/20 hover:shadow-lg hover:shadow-gold/5 transition-all duration-300 text-center group"
+              className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-black/[0.04] hover:border-gold/20 hover:shadow-lg hover:shadow-gold/5 transition-all duration-300 text-center group"
             >
               <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold-dark mx-auto mb-4 group-hover:bg-gold/15 group-hover:scale-110 transition-all duration-300">
                 {value.icon}

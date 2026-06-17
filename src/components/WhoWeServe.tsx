@@ -27,26 +27,26 @@ const clients = [
 
 export default function WhoWeServe() {
   return (
-    <section id="clients" className="relative py-24 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="clients" className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-sm font-medium text-blue uppercase tracking-widest">Who We Serve</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-6 text-text-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
             Partners in <span className="shimmer-blue">Institutional Finance</span>
           </h2>
-          <p className="text-text-dark-3 text-lg max-w-2xl mx-auto">
+          <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">
             We serve the most demanding participants in global financial markets —
             where precision and reliability are non-negotiable.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
           {clients.map((client, index) => (
             <motion.div
               key={index}
@@ -54,14 +54,14 @@ export default function WhoWeServe() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-7 border border-black/[0.04] hover:border-blue/20 hover:shadow-lg hover:shadow-blue/5 transition-all duration-300 group"
+              className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-7 border border-black/[0.04] hover:border-blue/20 hover:shadow-lg hover:shadow-blue/5 transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <div className="text-[10px] uppercase tracking-[0.2em] text-blue/40 font-semibold mb-1.5">
                     Segment {String(index + 1).padStart(2, "0")}
                   </div>
-                  <h3 className="text-text-dark font-semibold text-xl group-hover:text-blue-dark transition-colors duration-300">
+                  <h3 className="text-text-dark font-semibold text-lg sm:text-xl group-hover:text-blue-dark transition-colors duration-300">
                     {client.type}
                   </h3>
                 </div>

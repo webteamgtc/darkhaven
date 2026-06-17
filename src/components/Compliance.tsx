@@ -19,11 +19,11 @@ const standards = [
 
 export default function Compliance() {
   return (
-    <section id="compliance" className="relative py-24 md:py-32 bg-dark overflow-hidden">
+    <section id="compliance" className="relative py-16 sm:py-24 md:py-32 bg-dark overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-green/[0.03] rounded-full blur-[200px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-16">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export default function Compliance() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-6 text-white leading-[1.15]"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-white leading-[1.15]"
             >
               Regulated Across <span className="shimmer-green">Jurisdictions</span>
             </motion.h2>
@@ -47,7 +47,7 @@ export default function Compliance() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-text-light-2 text-lg leading-relaxed mb-8"
+              className="text-text-light-2 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8"
             >
               Multi-jurisdictional compliance isn&apos;t just a checkbox — it&apos;s foundational
               to how we operate. Every service, every market, every transaction adheres
@@ -91,11 +91,11 @@ export default function Compliance() {
             transition={{ duration: 0.5 }}
           >
             <div className="bg-dark-2 rounded-2xl border border-white/[0.05] overflow-hidden">
-              <div className="grid grid-cols-[auto_1fr_auto] gap-0">
-                <div className="grid grid-cols-[auto_1fr_auto] gap-0 col-span-3 border-b border-white/[0.06]">
-                  <div className="px-5 py-3 text-[10px] uppercase tracking-[0.2em] text-text-light-3/50 font-semibold border-r border-white/[0.04] w-16">ID</div>
-                  <div className="px-5 py-3 text-[10px] uppercase tracking-[0.2em] text-text-light-3/50 font-semibold border-r border-white/[0.04]">Regulator & Jurisdiction</div>
-                  <div className="px-5 py-3 text-[10px] uppercase tracking-[0.2em] text-text-light-3/50 font-semibold w-24 text-right">Status</div>
+              <div className="grid grid-cols-[auto_1fr_auto] gap-0 overflow-x-auto">
+                <div className="grid grid-cols-[auto_1fr_auto] gap-0 col-span-3 border-b border-white/[0.06] min-w-full">
+                  <div className="px-3 sm:px-5 py-3 text-[10px] uppercase tracking-[0.2em] text-text-light-3/50 font-semibold border-r border-white/[0.04] w-12 sm:w-16">ID</div>
+                  <div className="px-3 sm:px-5 py-3 text-[10px] uppercase tracking-[0.2em] text-text-light-3/50 font-semibold border-r border-white/[0.04]">Regulator & Jurisdiction</div>
+                  <div className="px-3 sm:px-5 py-3 text-[10px] uppercase tracking-[0.2em] text-text-light-3/50 font-semibold w-20 sm:w-24 text-right">Status</div>
                 </div>
                 {licenses.map((license, i) => (
                   <motion.div
@@ -106,14 +106,14 @@ export default function Compliance() {
                     transition={{ delay: i * 0.06 }}
                     className="contents group"
                   >
-                    <div className="px-5 py-3.5 border-r border-b border-white/[0.04] text-text-light-3/40 font-mono text-xs w-16 group-hover:bg-green/[0.03] transition-colors">
+                    <div className="px-3 sm:px-5 py-3.5 border-r border-b border-white/[0.04] text-text-light-3/40 font-mono text-xs w-12 sm:w-16 group-hover:bg-green/[0.03] transition-colors">
                       {String(i + 1).padStart(2, "0")}
                     </div>
-                    <div className="px-5 py-3.5 border-r border-b border-white/[0.04] group-hover:bg-green/[0.03] transition-colors">
+                    <div className="px-3 sm:px-5 py-3.5 border-r border-b border-white/[0.04] group-hover:bg-green/[0.03] transition-colors">
                       <div className="text-white font-semibold text-sm group-hover:text-green-light transition-colors">{license.regulator}</div>
                       <div className="text-text-light-3 text-xs mt-0.5">{license.jurisdiction}</div>
                     </div>
-                    <div className="px-5 py-3.5 border-b border-white/[0.04] w-24 text-right group-hover:bg-green/[0.03] transition-colors">
+                    <div className="px-3 sm:px-5 py-3.5 border-b border-white/[0.04] w-20 sm:w-24 text-right group-hover:bg-green/[0.03] transition-colors">
                       <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-green" />
                         <span className="text-green-light">{license.status}</span>

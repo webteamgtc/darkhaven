@@ -40,29 +40,29 @@ const pillars = [
 
 export default function WhatWeDo() {
   return (
-    <section id="solutions" className="relative py-24 md:py-32 bg-dark overflow-hidden">
+    <section id="solutions" className="relative py-16 sm:py-24 md:py-32 bg-dark overflow-hidden">
       <div className="absolute inset-0 bg-grid pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue/[0.03] rounded-full blur-[200px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="text-sm font-medium text-blue-light uppercase tracking-widest">What We Do</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-6 text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-white">
             Three Pillars of <span className="shimmer-gold">Excellence</span>
           </h2>
-          <p className="text-text-light-2 text-lg max-w-2xl mx-auto">
+          <p className="text-text-light-2 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">
             End-to-end institutional solutions engineered for precision, reliability,
             and regulatory adherence across global markets.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}
@@ -70,7 +70,7 @@ export default function WhatWeDo() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
-              className="bg-dark-2 rounded-2xl p-7 border border-white/[0.05] hover:border-blue/20 hover:shadow-lg hover:shadow-blue/5 transition-all duration-300 group"
+              className="bg-dark-2 rounded-xl sm:rounded-2xl p-5 sm:p-7 border border-white/[0.05] hover:border-blue/20 hover:shadow-lg hover:shadow-blue/5 transition-all duration-300 group"
             >
               <div className="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center text-blue mb-5 group-hover:bg-blue/15 group-hover:scale-110 transition-all duration-300">
                 {pillar.icon}

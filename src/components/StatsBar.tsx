@@ -37,7 +37,7 @@ const stats = [
 export default function StatsBar() {
   return (
     <section className="relative bg-light border-y border-black/[0.04]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <motion.div
@@ -46,15 +46,15 @@ export default function StatsBar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center py-10 lg:py-14 relative group"
+              className="text-center py-6 sm:py-10 lg:py-14 relative group"
             >
               {index > 0 && (
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-10 bg-gradient-to-b from-transparent via-blue/15 to-transparent hidden lg:block" />
               )}
-              <div className="text-3xl md:text-4xl font-semibold text-blue mb-2 inline-block">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-blue mb-1 sm:mb-2 inline-block">
                 <Counter target={stat.value} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
               </div>
-              <div className="text-sm text-text-dark-3 font-medium tracking-wide">{stat.label}</div>
+              <div className="text-xs sm:text-sm text-text-dark-3 font-medium tracking-wide">{stat.label}</div>
             </motion.div>
           ))}
         </div>

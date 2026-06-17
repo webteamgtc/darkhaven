@@ -55,10 +55,10 @@ export default function Navbar() {
   return (
     <>
       {/* Marquee Ticker */}
-      <div className="fixed top-0 left-0 right-0 z-[60] bg-blue-deep/90 backdrop-blur-sm border-b border-blue/10 overflow-hidden h-8 flex items-center">
+      <div className="fixed top-0 left-0 right-0 z-[60] bg-blue-deep/90 backdrop-blur-sm border-b border-blue/10 overflow-hidden h-7 sm:h-8 flex items-center">
         <div className="animate-marquee flex whitespace-nowrap">
           {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="mx-8 text-xs text-blue-light/70 font-medium flex items-center gap-2">
+            <span key={i} className="mx-5 sm:mx-8 text-[10px] sm:text-xs text-blue-light/70 font-medium flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-green/60" />
               {item}
             </span>
@@ -70,7 +70,7 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-8 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-7 sm:top-8 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? isDark
               ? "bg-dark/80 backdrop-blur-2xl border-b border-blue/5"

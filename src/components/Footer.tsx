@@ -8,7 +8,7 @@ const links = {
 export default function Footer() {
   return (
     <footer className="bg-dark">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand */}
           <div className="flex items-center gap-2.5">
@@ -45,7 +45,7 @@ export default function Footer() {
 
       {/* Copyright bar - blue shining bg */}
       <div className="bg-gradient-to-r from-blue-deep via-blue-dark to-blue-deep">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex flex-col md:flex-row items-center justify-between gap-2">
           <span className="text-xs text-blue-light/60">
             &copy; {new Date().getFullYear()} DrakHaven. All rights reserved.
           </span>

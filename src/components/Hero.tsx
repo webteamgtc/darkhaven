@@ -278,12 +278,12 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue/[0.06] rounded-full blur-[200px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/[0.04] rounded-full blur-[180px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-32">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-24 sm:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue/[0.08] border border-blue/15 mb-10"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue/[0.08] border border-blue/15 mb-7 sm:mb-10"
         >
           <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
           <span className="text-sm text-blue-light font-medium">Institutional-Grade Infrastructure</span>
@@ -293,7 +293,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-5 sm:mb-6"
         >
           <span className="shimmer-blue">Where Capital </span>
           <br />
@@ -304,7 +304,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg md:text-xl text-text-light-2 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
+          className="text-base sm:text-lg md:text-xl text-text-light-2 max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-2 sm:px-0"
         >
           DrakHaven provides institutional-grade liquidity, trading infrastructure,
           and compliance solutions — empowering brokers, prop firms, and financial
@@ -343,9 +343,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="mt-20 relative"
+          className="mt-12 sm:mt-20 relative"
         >
-          <div className="bg-dark-2 rounded-2xl border border-white/[0.06] p-1 shadow-2xl shadow-blue/10 max-w-4xl mx-auto">
+          <div className="bg-dark-2 rounded-xl sm:rounded-2xl border border-white/[0.06] p-1 shadow-2xl shadow-blue/10 max-w-4xl mx-auto overflow-hidden">
             <div className="bg-dark-3 rounded-t-xl px-4 py-2.5 flex items-center gap-2 border-b border-white/[0.04]">
               <div className="flex gap-1.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
@@ -358,23 +358,23 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="bg-dark-2/50 p-6 rounded-b-xl">
-              <div className="grid grid-cols-4 gap-3 mb-4">
+            <div className="bg-dark-2/50 p-3 sm:p-6 rounded-b-xl">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-3 sm:mb-4">
                 {[
                   { label: "Total Volume", value: "$2.54B", change: "+12.3%", color: "text-green" },
                   { label: "Active Clients", value: "354", change: "+8.1%", color: "text-blue-light" },
                   { label: "Avg. Execution", value: "<1ms", change: "99.9%", color: "text-gold" },
                   { label: "Uptime", value: "99.99%", change: "SLA Met", color: "text-green" },
                 ].map((item, i) => (
-                  <div key={i} className="bg-dark/40 rounded-xl p-3 border border-white/[0.04]">
+                  <div key={i} className="bg-dark/40 rounded-lg sm:rounded-xl p-2.5 sm:p-3 border border-white/[0.04]">
                     <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-1">{item.label}</div>
-                    <div className={`text-lg font-semibold ${item.color}`}>{item.value}</div>
+                    <div className={`text-base sm:text-lg font-semibold ${item.color}`}>{item.value}</div>
                     <div className="text-[10px] text-green/60">{item.change}</div>
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-3 gap-3">
-                <div className="col-span-2 bg-dark/40 rounded-xl p-4 border border-white/[0.04] h-32">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
+                <div className="sm:col-span-2 bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-28 sm:h-32">
                   <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-3">Liquidity Flow</div>
                   <div className="flex items-end gap-1 h-16">
                     {[40, 65, 45, 80, 55, 70, 90, 60, 75, 85, 50, 95].map((h, i) => (
@@ -382,7 +382,7 @@ export default function Hero() {
                     ))}
                   </div>
                 </div>
-                <div className="bg-dark/40 rounded-xl p-4 border border-white/[0.04] h-32">
+                <div className="bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-auto sm:h-32">
                   <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-3">Markets</div>
                   <div className="space-y-2">
                     {["FX Pairs: 80+", "Metals: 15+", "Indices: 25+"].map((m, i) => (
