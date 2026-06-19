@@ -25,7 +25,7 @@ function NetworkBackground() {
     }
 
     const particles: Particle[] = [];
-    const particleCount = 120;
+    const particleCount = 220;
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -116,7 +116,7 @@ function NetworkBackground() {
         p.vx *= 0.98; p.vy *= 0.98;
       }
 
-      const maxLineDist = 160;
+      const maxLineDist = 200;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -127,7 +127,7 @@ function NetworkBackground() {
             const midY = (particles[i].y + particles[j].y) / 2;
             const midDist = Math.sqrt((midX - mouse.x) ** 2 + (midY - mouse.y) ** 2);
             const boost = mouse.x > 0 && midDist < mouse.radius ? (1 - midDist / mouse.radius) * 0.3 : 0;
-            const alpha = (1 - dist / maxLineDist) * 0.08 + boost;
+            const alpha = (1 - dist / maxLineDist) * 0.12 + boost;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -318,14 +318,19 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-5 sm:mb-6"
         >
-          <span className="shimmer-blue">Where Intelligence </span>
-          <br />
-          <span className="shimmer-blue">Meets Infrastructure</span>
+          {["Where", "Intelligence", "Meets", "Infrastructure"].map((word, i) => (
+            <motion.span
+              key={word}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 + i * 0.22 }}
+              className="shimmer-blue inline-block mr-[0.25em]"
+            >
+              {word}{i === 1 ? <br /> : ""}
+            </motion.span>
+          ))}
         </motion.h1>
 
         <motion.p
