@@ -58,6 +58,16 @@ export default function WhoWeAre() {
             >
               We design and develop systems that enable organizations to operate with
               greater efficiency, scalability, and intelligence in a data-driven world.
+              
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-text-dark-3 text-sm leading-relaxed mb-6 sm:mb-8"
+            >
+            
               Founded in 2026, we operate with a long-term vision of building resilient
               digital ecosystems that support modern enterprises.
             </motion.p>
