@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Home", href: "/#home" },
@@ -84,14 +85,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <a href="#home" className="flex items-center gap-2.5">
+            <Link href="/#home" className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue to-blue-dark flex items-center justify-center shadow-lg shadow-blue/20">
                 <span className="text-white font-bold text-base">D</span>
               </div>
               <span className={`text-lg font-semibold transition-colors duration-500 ${isDark ? "text-white" : "text-text-dark"}`}>
                 Dark<span className="shimmer-blue">haven</span>
               </span>
-            </a>
+            </Link>
 
             <div className={`hidden lg:flex items-center gap-1 rounded-full px-1.5 py-1 transition-all duration-500 ${
               isDark
@@ -99,9 +100,10 @@ export default function Navbar() {
                 : "bg-black/[0.03] border border-black/[0.04]"
             }`}>
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
+                  scroll={true}
                   className={`px-4 py-1.5 text-[13px] rounded-full transition-all duration-300 ${
                     activeSection === link.href.replace("#", "")
                       ? "text-white bg-blue shadow-md shadow-blue/20"
@@ -111,17 +113,18 @@ export default function Navbar() {
                   }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
 
             <div className="hidden lg:flex items-center gap-3">
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
+                scroll={true}
                 className="px-6 py-2.5 text-sm font-medium bg-gradient-to-r from-blue to-blue-dark text-white rounded-full hover:shadow-lg hover:shadow-blue/25 transition-all duration-300"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
 
             <button className={`lg:hidden transition-colors duration-500 ${isDark ? "text-white" : "text-text-dark"}`} onClick={() => setMobileOpen(!mobileOpen)}>
@@ -150,9 +153,10 @@ export default function Navbar() {
             >
               <div className="px-6 py-4 space-y-1">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.name}
                     href={link.href}
+                    scroll={true}
                     onClick={() => setMobileOpen(false)}
                     className={`block py-3 px-4 rounded-xl text-sm transition-colors ${
                       activeSection === link.href.replace("#", "")
@@ -163,15 +167,16 @@ export default function Navbar() {
                     }`}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 ))}
-                <a
-                  href="#contact"
+                <Link
+                  href="/#contact"
+                  scroll={true}
                   onClick={() => setMobileOpen(false)}
                   className="block w-full mt-3 text-center px-6 py-3 text-sm font-medium bg-gradient-to-r from-blue to-blue-dark text-white rounded-full"
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </motion.div>
           )}
