@@ -62,8 +62,8 @@ export default function Footer() {
               <div className="w-1.5 h-1.5 rounded-full bg-green-light animate-pulse" />
               <span className="text-[11px] text-green-light font-medium">All Systems Operational</span>
             </div>
-            <span className="text-[11px] text-blue-light/40">support@darkhaven.com</span>
-            <span className="text-[11px] text-blue-light/40">(657) 531-9327</span>
+            <a href="mailto:support@darkhaven.com" className="text-[11px] text-blue-light/60 hover:text-blue-light transition-colors">support@darkhaven.com</a>
+            <a href="tel:6575319327" className="text-[11px] text-blue-light/60 hover:text-blue-light transition-colors">(657) 531-9327</a>
           </div>
         </div>
       </div>
