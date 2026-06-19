@@ -1,8 +1,47 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function CTABanner() {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    interest: "AI & Software Engineering",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setStatus("success");
+        setForm({ firstName: "", lastName: "", email: "", interest: "AI & Software Engineering", message: "" });
+      } else {
+        setStatus("error");
+        setErrorMsg(data.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMsg("Network error. Please try again.");
+    }
+  };
+
   return (
     <section id="contact" className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
       <div className="absolute inset-0 bg-dot-grid pointer-events-none opacity-30" />
@@ -23,7 +62,7 @@ export default function CTABanner() {
               Reach out to discuss how Darkhaven can help power your technology infrastructure and digital operations.
             </p>
             <div className="space-y-4 mb-6">
-              <a href="mailto:support@darkhaven.com" className="flex items-center gap-3 group">
+              <a href="mailto:support@darkhaven.ai" className="flex items-center gap-3 group">
                 <div className="w-9 h-9 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue/15 transition-colors">
                   <svg className="w-4 h-4 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
@@ -31,7 +70,7 @@ export default function CTABanner() {
                 </div>
                 <div>
                   <p className="text-xs text-text-dark-3 uppercase tracking-wider mb-0.5">Email</p>
-                  <p className="text-sm font-medium text-text-dark group-hover:text-blue transition-colors">support@darkhaven.com</p>
+                  <p className="text-sm font-medium text-text-dark group-hover:text-blue transition-colors">support@darkhaven.ai</p>
                 </div>
               </a>
               <a href="tel:6575319327" className="flex items-center gap-3 group">
@@ -79,62 +118,119 @@ export default function CTABanner() {
           >
             <div className="bg-light rounded-xl sm:rounded-2xl p-5 sm:p-8 border border-black/[0.04] shadow-lg shadow-blue/5">
               <h3 className="text-lg sm:text-xl font-semibold text-text-dark mb-5 sm:mb-6">Send Us a Message</h3>
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+
+              {status === "success" ? (
+                <div className="flex flex-col items-center justify-center py-10 text-center">
+                  <div className="w-14 h-14 rounded-full bg-green/10 flex items-center justify-center mb-4">
+                    <svg className="w-7 h-7 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-semibold text-text-dark mb-2">Message Sent!</h4>
+                  <p className="text-text-dark-3 text-sm mb-6">Thanks for reaching out. We&apos;ll get back to you within 24 hours.</p>
+                  <button
+                    onClick={() => setStatus("idle")}
+                    className="text-sm text-blue hover:underline"
+                  >
+                    Send another message
+                  </button>
+                </div>
+              ) : (
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div>
+                      <label className="block text-xs font-medium text-text-dark-3 mb-1.5 uppercase tracking-wider">
+                        First Name <span className="text-red-400">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        value={form.firstName}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm placeholder:text-text-dark-3/50 focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all"
+                        placeholder="John"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-medium text-text-dark-3 mb-1.5 uppercase tracking-wider">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        value={form.lastName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm placeholder:text-text-dark-3/50 focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all"
+                        placeholder="Smith"
+                      />
+                    </div>
+                  </div>
                   <div>
                     <label className="block text-xs font-medium text-text-dark-3 mb-1.5 uppercase tracking-wider">
-                      First Name
+                      Work Email <span className="text-red-400">*</span>
                     </label>
                     <input
-                      type="text"
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
                       className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm placeholder:text-text-dark-3/50 focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all"
-                      placeholder="John"
+                      placeholder="john@institution.com"
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-medium text-text-dark-3 mb-1.5 uppercase tracking-wider">
-                      Last Name
+                      Area of Interest
                     </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm placeholder:text-text-dark-3/50 focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all"
-                      placeholder="Smith"
+                    <select
+                      name="interest"
+                      value={form.interest}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all"
+                    >
+                      <option>AI & Software Engineering</option>
+                      <option>Data Infrastructure</option>
+                      <option>Digital Integration</option>
+                      <option>Enterprise Consulting</option>
+                      <option>General Inquiry</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-medium text-text-dark-3 mb-1.5 uppercase tracking-wider">
+                      Message <span className="text-red-400">*</span>
+                    </label>
+                    <textarea
+                      name="message"
+                      value={form.message}
+                      onChange={handleChange}
+                      required
+                      rows={4}
+                      className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm placeholder:text-text-dark-3/50 focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all resize-none"
+                      placeholder="Tell us about your project or inquiry..."
                     />
                   </div>
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-text-dark-3 mb-1.5 uppercase tracking-wider">
-                    Work Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm placeholder:text-text-dark-3/50 focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all"
-                    placeholder="john@institution.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-text-dark-3 mb-1.5 uppercase tracking-wider">
-                    Area of Interest
-                  </label>
-                  <select className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all">
-                    <option>AI & Software Engineering</option>
-                    <option>Data Infrastructure</option>
-                    <option>Digital Integration</option>
-                    <option>Enterprise Consulting</option>
-                    <option>General Inquiry</option>
-                  </select>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 text-sm font-semibold bg-gradient-to-r from-blue-deep via-blue to-blue-light text-white rounded-full hover:shadow-xl hover:shadow-blue/25 transition-all duration-300 relative overflow-hidden group mt-2"
-                >
-                  <span className="relative z-10">Send Message</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-shine via-white/20 to-blue-shine -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                </button>
-                <p className="text-[11px] text-text-dark-3/60 text-center mt-3">
-                  By submitting, you agree to our Privacy Policy. We&apos;ll never share your data.
-                </p>
-              </form>
+
+                  {status === "error" && (
+                    <p className="text-xs text-red-500 bg-red-50 border border-red-100 rounded-lg px-3 py-2">{errorMsg}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full px-6 py-3 text-sm font-semibold bg-gradient-to-r from-blue-deep via-blue to-blue-light text-white rounded-full hover:shadow-xl hover:shadow-blue/25 transition-all duration-300 relative overflow-hidden group mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    <span className="relative z-10">
+                      {status === "loading" ? "Sending…" : "Send Message"}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-shine via-white/20 to-blue-shine -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                  </button>
+                  <p className="text-[11px] text-text-dark-3/60 text-center mt-3">
+                    By submitting, you agree to our Privacy Policy. We&apos;ll never share your data.
+                  </p>
+                </form>
+              )}
             </div>
           </motion.div>
         </div>
