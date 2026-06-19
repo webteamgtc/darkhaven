@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
     if (!response.ok) {
       const err = await response.text();
       console.error("Mailgun error:", err);
-      return NextResponse.json({ error: "Failed to send message." }, { status: 500 });
+      return NextResponse.json({ error: `Mailgun: ${err}` }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
