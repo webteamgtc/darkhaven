@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Darkhaven — Institutional-Grade Technology Infrastructure",
+  title: "Darkhaven — AI-Driven Technology & Digital Infrastructure",
   description:
-    "Darkhaven builds AI-driven systems, data infrastructure, and enterprise software solutions that power modern digital operations and scalable business environments.",
+    "Darkhaven delivers intelligent data systems, AI-powered software engineering, and enterprise-grade digital infrastructure for scalable business operations.",
 };
 
 export default function RootLayout({

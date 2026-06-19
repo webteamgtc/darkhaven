@@ -178,7 +178,7 @@ export default function PrivacyPolicyPage() {
 
           <div className="flex gap-6 lg:gap-8  border border-gray-200 p-5 md:p-8 rounded-xl shadow-2xl">
             {/* Sticky Sidebar Container */}
-            <nav className="hidden lg:block w-[260px] flex-shrink-0">
+            <nav className="hidden lg:block w-[290px] flex-shrink-0">
               <div className="sticky top-28 border rounded-xl p-4" style={{ borderColor: "#e8e8e8", background: "#fafafa" }}>
                 <h3 className="text-xs font-semibold uppercase tracking-widest mb-3 text-blue">Contents</h3>
                 <div className="space-y-1.5">

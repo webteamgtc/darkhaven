@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Solutions — Darkhaven",
-  description: "Darkhaven's solutions empower organizations with intelligent systems, scalable architecture, and secure digital infrastructure.",
+  title: "Solutions — Darkhaven | Enterprise Technology & Scalable Digital Systems",
+  description: "Darkhaven's solutions empower organizations with AI-driven analytics, cloud-native platforms, secure infrastructure, and modular software architecture for modern enterprises.",
 };
 
 const solutions = [

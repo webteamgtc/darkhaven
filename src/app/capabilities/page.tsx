@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Capabilities — Darkhaven",
-  description: "Explore Darkhaven's core capabilities across intelligent data systems, AI & software engineering, and digital infrastructure.",
+  title: "Capabilities — Darkhaven | Intelligent Data, AI Engineering & Cloud Infrastructure",
+  description: "Discover Darkhaven's core capabilities: intelligent data systems, AI and software engineering, and digital infrastructure built for enterprise-scale operations.",
 };
 
 const capabilities = [

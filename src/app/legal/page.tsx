@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Legal Center — Darkhaven",
-  description: "Darkhaven Legal Center — Privacy Policy, Terms of Service, and Disclaimer.",
+  title: "Legal Center — Darkhaven | Policies, Terms & Compliance Documents",
+  description: "Access Darkhaven's legal documents including Privacy Policy, Terms of Service, and Disclaimer governing our technology services and platform usage.",
 };
 
 const legalPages = [

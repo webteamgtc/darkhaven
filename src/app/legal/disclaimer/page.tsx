@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Disclaimer — Darkhaven",
-  description: "Important legal disclaimers regarding Darkhaven's technology services and content.",
+  title: "Disclaimer — Darkhaven | Technology Services Legal Disclaimer",
+  description: "Read Darkhaven's disclaimer regarding technology services, limitation of liability, no financial advice, and service availability for our digital infrastructure platform.",
 };
 
 export default function DisclaimerPage() {
