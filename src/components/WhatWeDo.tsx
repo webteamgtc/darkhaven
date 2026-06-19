@@ -40,7 +40,7 @@ const pillars = [
 
 export default function WhatWeDo() {
   return (
-    <section id="solutions" className="relative py-16 sm:py-24 md:py-32 bg-dark overflow-hidden">
+    <section id="solutions" className="relative py-12 sm:py-16 bg-dark overflow-hidden">
       <div className="absolute inset-0 bg-grid pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue/[0.03] rounded-full blur-[200px] pointer-events-none" />
 

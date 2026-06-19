@@ -17,7 +17,7 @@ const credentials = [
 
 export default function WhoWeAre() {
   return (
-    <section id="about" className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
+    <section id="about" className="relative py-12 sm:py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-start">
           <div>

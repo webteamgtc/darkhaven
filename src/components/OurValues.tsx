@@ -43,7 +43,7 @@ const values = [
 
 export default function OurValues() {
   return (
-    <section id="values" className="relative py-16 sm:py-24 md:py-32 bg-light overflow-hidden">
+    <section id="values" className="relative py-12 sm:py-16 bg-light overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

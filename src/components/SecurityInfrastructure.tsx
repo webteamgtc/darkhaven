@@ -70,7 +70,7 @@ export default function SecurityInfrastructure() {
     <section
       id="security"
       aria-label="Security and Infrastructure Standards"
-      className="relative w-full overflow-hidden py-16 sm:py-24 md:py-32"
+      className="relative w-full overflow-hidden py-12 sm:py-16"
       style={{ background: "#05070A" }}
     >
       {/* Background layers */}
@@ -295,7 +295,7 @@ export default function SecurityInfrastructure() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="pt-10 sm:pt-14 lg:pt-16 text-center"
         >
-          <p className="text-sm leading-relaxed max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
+          <p className="text-sm leading-relaxed max-w-4xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
             Darkhaven builds structured, auditable, and scalable infrastructure systems designed
             for long-term operational resilience.
           </p>

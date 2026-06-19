@@ -477,9 +477,9 @@ export default function Hero() {
               {/* Bottom row */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                 {/* Animated bar chart */}
-                <div className="sm:col-span-2 bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-28 sm:h-36">
+                <div className="sm:col-span-2 bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-40 sm:h-52">
                   <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-3">System Load</div>
-                  <div className="flex items-end gap-1 h-16 sm:h-20">
+                  <div className="flex items-end gap-1 h-28 sm:h-36">
                     {bars.map((h, i) => (
                       <div
                         key={i}
@@ -496,7 +496,7 @@ export default function Hero() {
                 </div>
 
                 {/* Right panel — log feed + domains */}
-                <div className="bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-28 sm:h-36 overflow-hidden">
+                <div className="bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-40 sm:h-52 overflow-hidden">
                   <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-2">Live Activity</div>
                   <div className="space-y-1.5">
                     {logLines.slice(-3).map((line, i) => (
