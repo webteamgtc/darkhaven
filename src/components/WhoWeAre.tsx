@@ -3,18 +3,16 @@
 import { motion } from "framer-motion";
 
 const timeline = [
-  { year: "2012", event: "Founded in London" },
-  { year: "2015", event: "FCA Authorization" },
-  { year: "2017", event: "CySEC & ASIC Licensing" },
-  { year: "2019", event: "$1B AUM Milestone" },
-  { year: "2021", event: "350+ Institutional Clients" },
-  { year: "2024", event: "40+ Regulated Markets" },
+  { year: "2026", event: "Company Founded" },
+  { year: "2026", event: "Core AI Infrastructure Development" },
+  { year: "2026", event: "Enterprise Software Expansion" },
+  { year: "2026", event: "Global Technology Partnerships" },
 ];
 
 const credentials = [
-  { label: "Multi-Regulated", detail: "FCA, CySEC, ASIC, FSCA authorized" },
-  { label: "Institutional Technology", detail: "Ultra-low latency, co-located infrastructure" },
-  { label: "Fund Security", detail: "Segregated accounts, ISO 27001 certified" },
+  { label: "Multi-Disciplinary Engineering", detail: "AI + Data + Software + Infrastructure integration" },
+  { label: "Secure System Design", detail: "Security-first architecture across all systems" },
+  { label: "Scalable Technology Frameworks", detail: "Built for enterprise-level growth and complexity" },
 ];
 
 export default function WhoWeAre() {
@@ -38,7 +36,7 @@ export default function WhoWeAre() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark leading-[1.15]"
             >
-              Built on <span className="shimmer-blue">Precision</span>,<br />Driven by Trust
+              Built on <span className="shimmer-blue">Precision</span>,<br />Driven by Engineering
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -47,10 +45,9 @@ export default function WhoWeAre() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-text-dark-2 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6"
             >
-              DrakHaven is an institutional-grade financial infrastructure provider
-              delivering deep liquidity, cutting-edge technology, and robust compliance
-              solutions. We serve as the backbone for brokers, prop firms, and financial
-              institutions operating in the world&apos;s most demanding markets.
+              Darkhaven is a technology company focused on building intelligent digital
+              infrastructure across AI systems, software engineering, and enterprise backend
+              architecture.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -59,9 +56,10 @@ export default function WhoWeAre() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-text-dark-3 text-sm leading-relaxed mb-6 sm:mb-8"
             >
-              Founded in 2012, we&apos;ve grown from a London-based liquidity provider
-              to a global infrastructure platform trusted by 350+ institutional
-              clients across 40+ regulated markets.
+              We design and develop systems that enable organizations to operate with
+              greater efficiency, scalability, and intelligence in a data-driven world.
+              Founded in 2026, we operate with a long-term vision of building resilient
+              digital ecosystems that support modern enterprises.
             </motion.p>
 
             {/* Timeline */}
@@ -126,17 +124,17 @@ export default function WhoWeAre() {
                 <div>
                   <div className="text-xs uppercase tracking-widest text-blue font-semibold mb-2">Our Mission</div>
                   <p className="text-text-dark-2 text-sm leading-relaxed">
-                    To provide institutional-grade infrastructure that empowers financial
-                    institutions to operate with confidence, precision, and compliance
-                    across global markets.
+                    To build intelligent, scalable, and secure digital infrastructure
+                    that empowers organizations to transform complexity into structured,
+                    data-driven ecosystems.
                   </p>
                 </div>
                 <div className="h-px bg-blue/10" />
                 <div>
                   <div className="text-xs uppercase tracking-widest text-gold-dark font-semibold mb-2">Our Vision</div>
                   <p className="text-text-dark-2 text-sm leading-relaxed">
-                    To be the world&apos;s most trusted institutional infrastructure provider,
-                    setting the standard for liquidity, technology, and regulatory excellence.
+                    To be the world&apos;s most trusted technology infrastructure provider,
+                    setting the standard for AI systems, data engineering, and operational resilience.
                   </p>
                 </div>
               </div>

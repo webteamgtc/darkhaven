@@ -16,12 +16,11 @@ export default function CTABanner() {
           >
             <span className="text-sm font-medium text-blue uppercase tracking-widest">Get Started</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
-              Ready to Elevate Your{" "}
-              <span className="shimmer-blue">Infrastructure</span>?
+              Build the Next Generation of{" "}
+              <span className="shimmer-blue">Digital Infrastructure</span>
             </h2>
             <p className="text-text-dark-3 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Join 350+ institutions that trust DrakHaven for their critical trading
-              infrastructure. Our team is ready to design a solution tailored to your needs.
+              Partner with Darkhaven to develop scalable, intelligent, and secure technology systems.
             </p>
             <div className="space-y-3">
               {[
@@ -104,7 +103,7 @@ export default function CTABanner() {
                   type="submit"
                   className="w-full px-6 py-3 text-sm font-semibold bg-gradient-to-r from-blue-deep via-blue to-blue-light text-white rounded-full hover:shadow-xl hover:shadow-blue/25 transition-all duration-300 relative overflow-hidden group mt-2"
                 >
-                  <span className="relative z-10">Request Demo</span>
+                  <span className="relative z-10">Schedule Consultation</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-shine via-white/20 to-blue-shine -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 </button>
                 <p className="text-[11px] text-text-dark-3/60 text-center mt-3">

@@ -28,10 +28,10 @@ function Counter({ target, suffix = "", prefix = "", decimals = 0 }: {
 }
 
 const stats = [
-  { value: 2.5, prefix: "$", suffix: "B+", decimals: 1, label: "Assets Under Management" },
-  { value: 12, suffix: "+", label: "Years of Excellence" },
-  { value: 350, suffix: "+", label: "Clients Worldwide" },
-  { value: 40, suffix: "+", label: "Regulated Markets" },
+  { value: 5, suffix: "+", label: "Technology Domains" },
+  { value: 2026, label: "Founded" },
+  { value: 50, suffix: "+", label: "AI Models Deployed" },
+  { value: 99.99, suffix: "%", decimals: 2, label: "System Uptime" },
 ];
 
 export default function StatsBar() {
@@ -52,7 +52,7 @@ export default function StatsBar() {
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-10 bg-gradient-to-b from-transparent via-blue/15 to-transparent hidden lg:block" />
               )}
               <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-blue mb-1 sm:mb-2 inline-block">
-                <Counter target={stat.value} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
+                <Counter target={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
               </div>
               <div className="text-xs sm:text-sm text-text-dark-3 font-medium tracking-wide">{stat.label}</div>
             </motion.div>

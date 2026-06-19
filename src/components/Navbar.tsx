@@ -4,23 +4,21 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Solutions", href: "#solutions" },
-  { name: "Clients", href: "#clients" },
-  { name: "Values", href: "#values" },
-  { name: "Compliance", href: "#compliance" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Capabilities", href: "/capabilities" },
+  { name: "Solutions", href: "/solutions" },
+  { name: "Legal Center", href: "/legal" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const tickerItems = [
-  "FCA Authorized · United Kingdom",
-  "CySEC Licensed · European Union",
-  "ASIC Registered · Australia",
-  "FSCA Authorized · South Africa",
-  "$2.5B+ Assets Under Management",
-  "350+ Institutional Clients Worldwide",
-  "40+ Regulated Markets",
+  "AI-Driven Systems · Enterprise Software",
+  "Intelligent Data Infrastructure · Scalable Backend",
+  "Cloud & Backend Infrastructure · Security-First Architecture",
+  "Digital Integration Systems · Operational Technology",
+  "Founded 2026 · Global Technology Partnerships",
+  "Modular Engineering · Long-Term Infrastructure Value",
 ];
 
 export default function Navbar() {
@@ -48,9 +46,9 @@ export default function Navbar() {
 
   // Over hero (dark) or over dark sections → white text. Otherwise → dark text
   const whatWeDoEl = typeof document !== "undefined" ? document.getElementById("solutions") : null;
-  const complianceEl = typeof document !== "undefined" ? document.getElementById("compliance") : null;
+  const securityEl = typeof document !== "undefined" ? document.getElementById("security") : null;
   const isOverDarkSection = (el: HTMLElement | null) => el !== null && el.getBoundingClientRect().top <= 80 && el.getBoundingClientRect().bottom > 80;
-  const isDark = isHeroVisible || isOverDarkSection(whatWeDoEl) || isOverDarkSection(complianceEl);
+  const isDark = isHeroVisible || isOverDarkSection(whatWeDoEl) || isOverDarkSection(securityEl);
 
   return (
     <>
@@ -85,7 +83,7 @@ export default function Navbar() {
                 <span className="text-white font-bold text-base">D</span>
               </div>
               <span className={`text-lg font-semibold transition-colors duration-500 ${isDark ? "text-white" : "text-text-dark"}`}>
-                Drak<span className="shimmer-blue">Haven</span>
+                Dark<span className="shimmer-blue">haven</span>
               </span>
             </a>
 
@@ -116,7 +114,7 @@ export default function Navbar() {
                 href="#contact"
                 className="px-6 py-2.5 text-sm font-medium bg-gradient-to-r from-blue to-blue-dark text-white rounded-full hover:shadow-lg hover:shadow-blue/25 transition-all duration-300"
               >
-                Book a Demo
+                Contact Us
               </a>
             </div>
 
@@ -166,7 +164,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="block w-full mt-3 text-center px-6 py-3 text-sm font-medium bg-gradient-to-r from-blue to-blue-dark text-white rounded-full"
                 >
-                  Book a Demo
+                  Contact Us
                 </a>
               </div>
             </motion.div>

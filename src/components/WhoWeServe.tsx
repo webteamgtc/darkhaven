@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 
 const clients = [
   {
-    type: "Forex Brokers",
-    description: "Multi-asset brokerage firms seeking institutional liquidity, competitive spreads, and regulatory compliance across jurisdictions.",
-    capabilities: ["Liquidity Provision", "Risk Management", "Regulatory Coverage"],
+    type: "Enterprise Technology Teams",
+    description: "Supporting internal system modernization and digital transformation for organizations upgrading their technology stack.",
+    capabilities: ["System Modernization", "Digital Transformation", "Infrastructure Upgrade"],
   },
   {
-    type: "Prop Trading Firms",
-    description: "Proprietary trading operations demanding ultra-low latency execution, deep market access, and scalable infrastructure.",
-    capabilities: ["Low-Latency Execution", "Market Access", "Scalable Infra"],
+    type: "AI-Driven Startups",
+    description: "Building scalable AI and data infrastructure foundations for the next generation of intelligent applications.",
+    capabilities: ["AI Infrastructure", "Data Pipelines", "Scalable Architecture"],
   },
   {
-    type: "Hedge Funds & Asset Managers",
-    description: "Sophisticated investment managers requiring best execution, comprehensive reporting, and institutional-grade operational support.",
-    capabilities: ["Best Execution", "Prime Services", "Custom Solutions"],
+    type: "Software-First Companies",
+    description: "Providing backend engineering and system architecture support for companies building software-centric products.",
+    capabilities: ["Backend Engineering", "System Architecture", "API Design"],
   },
   {
-    type: "Banks & Financial Institutions",
-    description: "Systemically important institutions needing robust, compliant infrastructure with enterprise-level reliability and security.",
-    capabilities: ["Enterprise Security", "Compliance Framework", "24/5 Support"],
+    type: "Institutional Organizations",
+    description: "Delivering secure, high-performance digital systems for organizations requiring enterprise-grade reliability.",
+    capabilities: ["Enterprise Security", "High Performance", "Compliance Ready"],
   },
 ];
 
@@ -38,11 +38,11 @@ export default function WhoWeServe() {
         >
           <span className="text-sm font-medium text-blue uppercase tracking-widest">Who We Serve</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
-            Partners in <span className="shimmer-blue">Institutional Finance</span>
+            Partners in <span className="shimmer-blue">Digital Transformation</span>
           </h2>
           <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">
-            We serve the most demanding participants in global financial markets —
-            where precision and reliability are non-negotiable.
+            We work with organizations building the next generation of digital
+            infrastructure and intelligent systems.
           </p>
         </motion.div>
 

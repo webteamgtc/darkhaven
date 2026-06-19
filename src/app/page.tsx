@@ -5,7 +5,7 @@ import WhoWeAre from "@/components/WhoWeAre";
 import WhatWeDo from "@/components/WhatWeDo";
 import WhoWeServe from "@/components/WhoWeServe";
 import OurValues from "@/components/OurValues";
-import Compliance from "@/components/Compliance";
+import SecurityInfrastructure from "@/components/SecurityInfrastructure";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
@@ -19,7 +19,7 @@ export default function Home() {
       <WhatWeDo />
       <WhoWeServe />
       <OurValues />
-      <Compliance />
+      <SecurityInfrastructure />
       <CTABanner />
       <Footer />
     </main>

@@ -286,7 +286,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue/[0.08] border border-blue/15 mb-7 sm:mb-10"
         >
           <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
-          <span className="text-sm text-blue-light font-medium">Institutional-Grade Infrastructure</span>
+          <span className="text-sm text-blue-light font-medium">Institutional-Grade Technology Infrastructure</span>
         </motion.div>
 
         <motion.h1
@@ -295,9 +295,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-5 sm:mb-6"
         >
-          <span className="shimmer-blue">Where Capital </span>
+          <span className="shimmer-blue">Where Intelligence </span>
           <br />
-          <span className="shimmer-blue">Meets Conviction</span>
+          <span className="shimmer-blue">Meets Infrastructure</span>
         </motion.h1>
 
         <motion.p
@@ -306,9 +306,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-base sm:text-lg md:text-xl text-text-light-2 max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-2 sm:px-0"
         >
-          DrakHaven provides institutional-grade liquidity, trading infrastructure,
-          and compliance solutions — empowering brokers, prop firms, and financial
-          institutions worldwide.
+          Darkhaven builds AI-driven systems, data infrastructure, and enterprise software
+          solutions that power modern digital operations and scalable business environments.
+          We help organizations transform complexity into structured, intelligent systems.
         </motion.p>
 
         <motion.div
@@ -319,18 +319,18 @@ export default function Hero() {
         >
           {/* Gold shining button */}
           <a
-            href="#contact"
+            href="/capabilities"
             className="px-8 py-3.5 text-sm font-semibold bg-gradient-to-r from-gold-dark via-gold-light to-gold text-dark rounded-full hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 relative overflow-hidden group"
           >
-            <span className="relative z-10">Book a Demo</span>
+            <span className="relative z-10">Explore Capabilities</span>
             <div className="absolute inset-0 bg-gradient-to-r from-gold-shine via-white/30 to-gold-shine -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
           </a>
           {/* Blue shining button */}
           <a
-            href="#about"
+            href="/#contact"
             className="px-8 py-3.5 text-sm font-semibold bg-gradient-to-r from-blue-deep via-blue-light to-blue text-white rounded-full hover:shadow-xl hover:shadow-blue/30 transition-all duration-300 flex items-center gap-2 relative overflow-hidden group"
           >
-            <span className="relative z-10">Learn More</span>
+            <span className="relative z-10">Contact Us</span>
             <svg className="w-4 h-4 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -354,17 +354,17 @@ export default function Hero() {
               </div>
               <div className="flex-1 flex justify-center">
                 <div className="bg-dark/60 rounded-md px-4 py-1 text-[11px] text-text-light-3 font-mono">
-                  dashboard.drakhaven.ai
+                  platform.darkhaven.ai
                 </div>
               </div>
             </div>
             <div className="bg-dark-2/50 p-3 sm:p-6 rounded-b-xl">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-3 sm:mb-4">
                 {[
-                  { label: "Total Volume", value: "$2.54B", change: "+12.3%", color: "text-green" },
-                  { label: "Active Clients", value: "354", change: "+8.1%", color: "text-blue-light" },
-                  { label: "Avg. Execution", value: "<1ms", change: "99.9%", color: "text-gold" },
-                  { label: "Uptime", value: "99.99%", change: "SLA Met", color: "text-green" },
+                  { label: "AI Models", value: "50+", change: "Active", color: "text-blue-light" },
+                  { label: "Data Points", value: "10B+", change: "Processed", color: "text-green" },
+                  { label: "Uptime", value: "99.99%", change: "SLA Met", color: "text-gold" },
+                  { label: "Systems", value: "200+", change: "Deployed", color: "text-green" },
                 ].map((item, i) => (
                   <div key={i} className="bg-dark/40 rounded-lg sm:rounded-xl p-2.5 sm:p-3 border border-white/[0.04]">
                     <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-1">{item.label}</div>
@@ -375,7 +375,7 @@ export default function Hero() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                 <div className="sm:col-span-2 bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-28 sm:h-32">
-                  <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-3">Liquidity Flow</div>
+                  <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-3">System Load</div>
                   <div className="flex items-end gap-1 h-16">
                     {[40, 65, 45, 80, 55, 70, 90, 60, 75, 85, 50, 95].map((h, i) => (
                       <div key={i} className="flex-1 rounded-t" style={{ height: `${h}%`, background: `linear-gradient(to top, rgba(59,130,246,0.3), rgba(59,130,246,0.6))` }} />
@@ -383,9 +383,9 @@ export default function Hero() {
                   </div>
                 </div>
                 <div className="bg-dark/40 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-white/[0.04] h-auto sm:h-32">
-                  <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-3">Markets</div>
+                  <div className="text-[10px] text-text-light-3 uppercase tracking-wider mb-3">Domains</div>
                   <div className="space-y-2">
-                    {["FX Pairs: 80+", "Metals: 15+", "Indices: 25+"].map((m, i) => (
+                    {["AI Pipelines: 40+", "API Endpoints: 200+", "Microservices: 80+"].map((m, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <div className="w-1 h-1 rounded-full bg-blue/50" />
                         <span className="text-[11px] text-text-light-2">{m}</span>

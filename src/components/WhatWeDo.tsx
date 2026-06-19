@@ -4,35 +4,35 @@ import { motion } from "framer-motion";
 
 const pillars = [
   {
-    title: "Liquidity Aggregation",
-    summary: "Connecting institutions to the world's deepest liquidity pools",
-    description: "Deep, institutional-grade liquidity sourced from Tier-1 banks, ECNs, and MTFs — ensuring competitive spreads and reliable execution across all market conditions.",
-    features: ["Tier-1 Bank Feeds", "ECN Aggregation", "Zero Last-Look", "Depth of Market"],
+    title: "Intelligent Data Systems",
+    summary: "Structured data ecosystems for modern enterprises",
+    description: "We design structured data systems that enable organizations to collect, process, and operationalize information efficiently across distributed environments.",
+    features: ["Data Processing", "Real-Time Integration", "Distribution Systems", "Analytics"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
       </svg>
     ),
   },
   {
-    title: "Trading Infrastructure",
-    summary: "Ultra-low latency systems built for institutional throughput",
-    description: "Enterprise-grade trading infrastructure with ultra-low latency execution, co-located servers, and institutional-grade order management systems.",
-    features: ["Co-Located Servers", "Sub-ms Execution", "Redundant Feeds", "OMS Integration"],
+    title: "AI & Software Engineering",
+    summary: "Intelligent frameworks for automation and decision support",
+    description: "We build artificial intelligence frameworks and enterprise software solutions that support automation, decision systems, and operational intelligence.",
+    features: ["AI Frameworks", "Automation", "Decision Systems", "Operational Intelligence"],
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Digital Infrastructure & Backend",
+    summary: "Scalable backend architectures for enterprise reliability",
+    description: "We develop scalable backend architectures, cloud-based systems, and enterprise infrastructure that ensure reliability, security, and performance.",
+    features: ["Cloud Systems", "Backend Architecture", "Enterprise Infrastructure", "High Availability"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Compliance & Risk",
-    summary: "Multi-jurisdictional compliance safeguarding every transaction",
-    description: "Comprehensive regulatory compliance infrastructure with automated monitoring, reporting, and multi-jurisdictional coverage across 40+ markets.",
-    features: ["KYC/AML Automation", "Transaction Reporting", "Risk Monitoring", "Multi-License"],
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
   },
@@ -54,11 +54,11 @@ export default function WhatWeDo() {
         >
           <span className="text-sm font-medium text-blue-light uppercase tracking-widest">What We Do</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-white">
-            Three Pillars of <span className="shimmer-gold">Excellence</span>
+            Three Pillars of <span className="shimmer-gold">Intelligent Infrastructure</span>
           </h2>
           <p className="text-text-light-2 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">
-            End-to-end institutional solutions engineered for precision, reliability,
-            and regulatory adherence across global markets.
+            End-to-end technology solutions engineered for intelligence, scalability,
+            and operational resilience across digital environments.
           </p>
         </motion.div>
 

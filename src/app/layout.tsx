@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DrakHaven — Institutional-Grade Investment Infrastructure",
+  title: "Darkhaven — Institutional-Grade Technology Infrastructure",
   description:
-    "DrakHaven delivers institutional-grade liquidity, trading infrastructure, and compliance solutions for brokers, prop firms, hedge funds, and banks worldwide.",
+    "Darkhaven builds AI-driven systems, data infrastructure, and enterprise software solutions that power modern digital operations and scalable business environments.",
 };
 
 export default function RootLayout({

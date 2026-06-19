@@ -133,3 +133,21 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Security & Infrastructure section animations */
+@keyframes dashFlow {
+  to { stroke-dashoffset: -200; }
+}
+
+@keyframes nodePulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+.animate-dashFlow {
+  animation: dashFlow 24s linear infinite;
+}
+
+.animate-nodePulse {
+  animation: nodePulse 4s ease-in-out infinite;
+}
