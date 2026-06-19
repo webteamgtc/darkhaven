@@ -29,7 +29,7 @@ export default function LegalCenterPage() {
   return (
     <main>
       <Navbar />
-      <section className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
+      <section className=" pt-16 sm:pt-24 md:pt-32 bg-white mb-10 md:mb-20 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-sm font-medium text-blue uppercase tracking-widest">Legal Center</span>

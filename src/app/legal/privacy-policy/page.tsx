@@ -168,7 +168,7 @@ export default function PrivacyPolicyPage() {
   return (
     <main>
       <Navbar />
-      <section className="relative py-16 sm:py-24 md:py-32 bg-white">
+      <section className="relative pt-16 sm:pt-24 md:pt-32 bg-white mb-10 md:mb-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
             <span className="text-sm font-medium text-blue uppercase tracking-widest">Legal</span>
@@ -176,7 +176,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-sm text-text-dark-3">Last updated: June 2026</p>
           </div>
 
-          <div className="flex gap-6 lg:gap-8">
+          <div className="flex gap-6 lg:gap-8  border border-gray-200 p-5 md:p-8 rounded-xl shadow-2xl">
             {/* Sticky Sidebar Container */}
             <nav className="hidden lg:block w-[260px] flex-shrink-0">
               <div className="sticky top-28 border rounded-xl p-4" style={{ borderColor: "#e8e8e8", background: "#fafafa" }}>
@@ -201,19 +201,6 @@ export default function PrivacyPolicyPage() {
                 </div>
               </div>
             </nav>
-
-            {/* Mobile dropdown */}
-            <div className="lg:hidden mb-6 w-full">
-              <select
-                onChange={(e) => scrollTo(e.target.value)}
-                value={active}
-                className="w-full bg-white border border-light-2 rounded-lg px-4 py-2.5 text-sm text-text-dark"
-              >
-                {sections.map((s) => (
-                  <option key={s.id} value={s.id}>{s.title}</option>
-                ))}
-              </select>
-            </div>
 
             {/* Content Container */}
             <div className="flex-1 min-w-0 border rounded-xl p-4 sm:p-5 space-y-4" style={{ borderColor: "#e8e8e8", background: "#fafafa" }}>
