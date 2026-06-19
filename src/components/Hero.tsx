@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-function NetworkBackground() {
+function TorusBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -12,250 +12,122 @@ function NetworkBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationId: number;
-    let time = 0;
-    const mouse = { x: -1000, y: -1000, radius: 200 }; // Off-screen initially
-
-    interface Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      baseSize: number;
-      size: number;
-      colorR: number;
-      colorG: number;
-      colorB: number;
-      baseAlpha: number;
-      alpha: number;
-    }
-
-    const particles: Particle[] = [];
-    const particleCount = 120;
+    let animId: number;
+    let t = 0;
 
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
+    resize();
+    window.addEventListener("resize", resize);
 
-    const initParticles = () => {
-      const colors = [
-        { r: 59, g: 130, b: 246 },   // Blue
-        { r: 96, g: 165, b: 250 },   // Blue-light
-        { r: 245, g: 158, b: 11 },   // Gold
-        { r: 251, g: 191, b: 36 },   // Gold-light
-        { r: 16, g: 185, b: 129 },   // Green
-      ];
-      for (let i = 0; i < particleCount; i++) {
-        const c = colors[Math.floor(Math.random() * colors.length)];
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: (Math.random() - 0.5) * 0.3,
-          baseSize: Math.random() * 2 + 0.8,
-          size: 0,
-          colorR: c.r,
-          colorG: c.g,
-          colorB: c.b,
-          baseAlpha: Math.random() * 0.3 + 0.1,
-          alpha: 0,
-        });
+    // --- 3D projection helpers ---
+    const project = (x: number, y: number, z: number, cx: number, cy: number, fov: number) => {
+      const scale = fov / (fov + z);
+      return { sx: cx + x * scale, sy: cy + y * scale, scale };
+    };
+
+    // Rotate a point around X axis
+    const rotX = (y: number, z: number, a: number) => ({
+      y: y * Math.cos(a) - z * Math.sin(a),
+      z: y * Math.sin(a) + z * Math.cos(a),
+    });
+    // Rotate a point around Y axis
+    const rotY = (x: number, z: number, a: number) => ({
+      x: x * Math.cos(a) + z * Math.sin(a),
+      z: -x * Math.sin(a) + z * Math.cos(a),
+    });
+
+    // Build torus points
+    const R = 160; // major radius
+    const r = 52;  // minor radius
+    const torusSegs = 28;
+    const tubeSegs = 18;
+    const cubeSize = 7;
+
+    interface TorusPoint {
+      ox: number; oy: number; oz: number;
+      colorIdx: number;
+    }
+    const points: TorusPoint[] = [];
+    for (let i = 0; i < torusSegs; i++) {
+      const u = (i / torusSegs) * Math.PI * 2;
+      for (let j = 0; j < tubeSegs; j++) {
+        const v = (j / tubeSegs) * Math.PI * 2;
+        const ox = (R + r * Math.cos(v)) * Math.cos(u);
+        const oy = (R + r * Math.cos(v)) * Math.sin(u);
+        const oz = r * Math.sin(v);
+        // Color: alternate blue/gold based on position
+        const colorIdx = (i + j) % 3;
+        points.push({ ox, oy, oz, colorIdx });
       }
-    };
+    }
 
-    // Mouse tracking
-    const handleMouseMove = (e: MouseEvent) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-    };
-    const handleMouseLeave = () => {
-      mouse.x = -1000;
-      mouse.y = -1000;
+    const COLORS = [
+      { r: 59,  g: 130, b: 246 },  // blue
+      { r: 96,  g: 165, b: 250 },  // blue-light
+      { r: 245, g: 158, b: 11  },  // gold
+    ];
+
+    const drawCube = (sx: number, sy: number, scale: number, colorIdx: number, depth: number) => {
+      const s = cubeSize * scale;
+      const c = COLORS[colorIdx];
+      // depth-based opacity: closer = slightly more visible, but keep overall low
+      const baseAlpha = 0.13 + (depth + 1) * 0.04;
+
+      // Face fill
+      ctx.fillStyle = `rgba(${c.r},${c.g},${c.b},${baseAlpha})`;
+      ctx.fillRect(sx - s / 2, sy - s / 2, s, s);
+
+      // Edge stroke — slightly brighter
+      ctx.strokeStyle = `rgba(${c.r},${c.g},${c.b},${baseAlpha + 0.12})`;
+      ctx.lineWidth = 0.5;
+      ctx.strokeRect(sx - s / 2, sy - s / 2, s, s);
+
+      // Inner highlight
+      const hs = s * 0.35;
+      ctx.fillStyle = `rgba(255,255,255,${baseAlpha * 0.3})`;
+      ctx.fillRect(sx - s / 2 + 1, sy - s / 2 + 1, hs, hs);
     };
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time += 0.003;
+      t += 0.004;
 
-      // --- Mouse glow ---
-      if (mouse.x > 0 && mouse.y > 0) {
-        const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, mouse.radius);
-        gradient.addColorStop(0, "rgba(59,130,246,0.08)");
-        gradient.addColorStop(0.3, "rgba(59,130,246,0.04)");
-        gradient.addColorStop(0.6, "rgba(245,158,11,0.02)");
-        gradient.addColorStop(1, "rgba(0,0,0,0)");
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+      const fov = 500;
+
+      // Collect projected points with z for depth sorting
+      const projected = points.map(p => {
+        // Rotate around Y (slow)
+        let { x: rx, z: rz } = rotY(p.ox, p.oz, t * 0.7);
+        // Rotate around X (tilt)
+        let { y: ry, z: rz2 } = rotX(p.oy, rz, t * 0.4 + 0.5);
+        // Slight Z spin
+        const { x: fx, z: fz } = rotY(rx, rz2, t * 0.15);
+
+        const proj = project(fx, ry, fz, cx, cy, fov);
+        return { ...proj, z: fz, colorIdx: p.colorIdx };
+      });
+
+      // Sort back-to-front (painter's algorithm)
+      projected.sort((a, b) => a.z - b.z);
+
+      // Draw
+      for (const p of projected) {
+        const depthNorm = (p.z + R + r) / (2 * (R + r)); // 0–1
+        drawCube(p.sx, p.sy, p.scale * 0.9, p.colorIdx, depthNorm);
       }
 
-      // --- Pulsing rings from mouse ---
-      if (mouse.x > 0) {
-        for (let i = 0; i < 3; i++) {
-          const phase = (time * 0.6 + i / 3) % 1;
-          const radius = phase * 250;
-          const alpha = (1 - phase) * 0.06;
-          ctx.beginPath();
-          ctx.arc(mouse.x, mouse.y, radius, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
-          ctx.lineWidth = 1.5;
-          ctx.stroke();
-        }
-      }
-
-      // --- Ambient pulsing rings from center ---
-      for (let i = 0; i < 2; i++) {
-        const phase = (time * 0.4 + i / 2) % 1;
-        const radius = phase * 500;
-        const alpha = (1 - phase) * 0.025;
-        ctx.beginPath();
-        ctx.arc(canvas.width / 2, canvas.height * 0.35, radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
-      }
-
-      // --- Update particles ---
-      for (const p of particles) {
-        // Mouse interaction — repel gently + brighten
-        const dx = p.x - mouse.x;
-        const dy = p.y - mouse.y;
-        const distToMouse = Math.sqrt(dx * dx + dy * dy);
-        const mouseInfluence = mouse.radius;
-
-        if (distToMouse < mouseInfluence && mouse.x > 0) {
-          // Gentle push away from cursor
-          const force = (mouseInfluence - distToMouse) / mouseInfluence;
-          const angle = Math.atan2(dy, dx);
-          p.vx += Math.cos(angle) * force * 0.3;
-          p.vy += Math.sin(angle) * force * 0.3;
-          // Brighten near mouse
-          p.size = p.baseSize + force * 3;
-          p.alpha = p.baseAlpha + force * 0.4;
-        } else {
-          p.size = p.baseSize;
-          p.alpha = p.baseAlpha;
-        }
-
-        // Normal movement
-        p.x += p.vx;
-        p.y += p.vy;
-
-        // Soft bounce
-        if (p.x < 0) { p.x = 0; p.vx *= -0.5; }
-        if (p.x > canvas.width) { p.x = canvas.width; p.vx *= -0.5; }
-        if (p.y < 0) { p.y = 0; p.vy *= -0.5; }
-        if (p.y > canvas.height) { p.y = canvas.height; p.vy *= -0.5; }
-
-        // Damping
-        p.vx *= 0.98;
-        p.vy *= 0.98;
-      }
-
-      // --- Draw connecting lines (near mouse only = brighter, far = subtle) ---
-      const maxLineDist = 160;
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < maxLineDist) {
-            const baseAlpha = (1 - dist / maxLineDist) * 0.08;
-            // Boost alpha near mouse
-            const midX = (particles[i].x + particles[j].x) / 2;
-            const midY = (particles[i].y + particles[j].y) / 2;
-            const midDistToMouse = Math.sqrt((midX - mouse.x) ** 2 + (midY - mouse.y) ** 2);
-            const mouseBoost = mouse.x > 0 && midDistToMouse < mouse.radius ? (1 - midDistToMouse / mouse.radius) * 0.3 : 0;
-            const finalAlpha = baseAlpha + mouseBoost;
-
-            // Color blend based on mouse proximity
-            const nearMouse = mouse.x > 0 && midDistToMouse < mouse.radius;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            if (nearMouse) {
-              // Blue → gold gradient near mouse
-              ctx.strokeStyle = `rgba(59,130,246,${finalAlpha})`;
-              ctx.lineWidth = 0.8;
-            } else {
-              ctx.strokeStyle = `rgba(59,130,246,${finalAlpha})`;
-              ctx.lineWidth = 0.4;
-            }
-            ctx.stroke();
-          }
-        }
-      }
-
-      // --- Draw mouse-to-particle connections ---
-      if (mouse.x > 0) {
-        for (const p of particles) {
-          const dx = p.x - mouse.x;
-          const dy = p.y - mouse.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < mouse.radius * 1.2) {
-            const alpha = (1 - dist / (mouse.radius * 1.2)) * 0.15;
-            ctx.beginPath();
-            ctx.moveTo(mouse.x, mouse.y);
-            ctx.lineTo(p.x, p.y);
-            ctx.strokeStyle = `rgba(245,158,11,${alpha})`;
-            ctx.lineWidth = 0.6;
-            ctx.stroke();
-          }
-        }
-      }
-
-      // --- Draw particles ---
-      for (const p of particles) {
-        // Outer glow
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size * 5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${p.colorR},${p.colorG},${p.colorB},${p.alpha * 0.15})`;
-        ctx.fill();
-
-        // Inner bright dot
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${p.colorR},${p.colorG},${p.colorB},${p.alpha})`;
-        ctx.fill();
-
-        // Extra bright core for mouse-near particles
-        if (p.size > p.baseSize * 1.5) {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size * 0.5, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255,255,255,${(p.alpha - p.baseAlpha) * 0.5})`;
-          ctx.fill();
-        }
-      }
-
-      // --- Floating data streams (vertical dotted lines) ---
-      const streamCount = 6;
-      for (let s = 0; s < streamCount; s++) {
-        const streamX = (canvas.width / (streamCount + 1)) * (s + 1);
-        const offset = (time * 30 + s * 40) % canvas.height;
-        for (let d = 0; d < 15; d++) {
-          const dotY = (offset + d * 20) % canvas.height;
-          const dotAlpha = 0.04 + (d < 5 ? d * 0.01 : 0);
-          ctx.beginPath();
-          ctx.arc(streamX, dotY, 1, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(59,130,246,${dotAlpha})`;
-          ctx.fill();
-        }
-      }
-
-      animationId = requestAnimationFrame(draw);
+      animId = requestAnimationFrame(draw);
     };
 
-    resize();
-    initParticles();
-    canvas.addEventListener("mousemove", handleMouseMove);
-    canvas.addEventListener("mouseleave", handleMouseLeave);
     draw();
-    window.addEventListener("resize", resize);
     return () => {
+      cancelAnimationFrame(animId);
       window.removeEventListener("resize", resize);
-      canvas.removeEventListener("mousemove", handleMouseMove);
-      canvas.removeEventListener("mouseleave", handleMouseLeave);
-      cancelAnimationFrame(animationId);
     };
   }, []);
 
@@ -264,8 +136,9 @@ function NetworkBackground() {
       ref={canvasRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-      className="absolute inset-0"
+      transition={{ duration: 2.5 }}
+      className="absolute inset-0 pointer-events-none"
+      style={{ opacity: 0.55 }}
     />
   );
 }
@@ -359,7 +232,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-10">
       <div className="absolute inset-0 bg-dark" />
-      <NetworkBackground />
+      <TorusBackground />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue/[0.06] rounded-full blur-[200px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/[0.04] rounded-full blur-[180px] pointer-events-none" />
 
