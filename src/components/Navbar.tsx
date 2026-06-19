@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Home", href: "/#home" },
+  { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
   { name: "Capabilities", href: "/capabilities" },
   { name: "Solutions", href: "/solutions" },
@@ -85,7 +85,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/#home" className="flex items-center gap-2.5">
+            <Link href="/" className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue to-blue-dark flex items-center justify-center shadow-lg shadow-blue/20">
                 <span className="text-white font-bold text-base">D</span>
               </div>
