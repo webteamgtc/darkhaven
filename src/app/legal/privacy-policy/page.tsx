@@ -176,11 +176,11 @@ export default function PrivacyPolicyPage() {
             <p className="text-sm text-text-dark-3">Last updated: June 2026</p>
           </div>
 
-          <div className="flex gap-8 lg:gap-12">
-            {/* Sticky Sidebar */}
+          <div className="flex gap-6 lg:gap-8">
+            {/* Sticky Sidebar Container */}
             <nav className="hidden lg:block w-[260px] flex-shrink-0">
-              <div className="sticky top-28">
-                <h3 className="text-xs font-semibold uppercase tracking-widest mb-4 text-blue">Contents</h3>
+              <div className="sticky top-28 border rounded-xl p-4" style={{ borderColor: "#e8e8e8", background: "#fafafa" }}>
+                <h3 className="text-xs font-semibold uppercase tracking-widest mb-3 text-blue">Contents</h3>
                 <div className="space-y-1.5">
                   {sections.map((s) => (
                     <button
@@ -189,7 +189,7 @@ export default function PrivacyPolicyPage() {
                       className="flex items-center justify-between w-full text-left text-sm px-3.5 py-2.5 rounded-lg transition-all duration-200 border"
                       style={active === s.id
                         ? { background: "rgba(59,130,246,0.06)", color: "#2563EB", borderColor: "#3B82F6", fontWeight: 600, boxShadow: "0 0 12px rgba(59,130,246,0.15)" }
-                        : { color: "#6b6966", borderColor: "#f0f0f0", background: "#fafafa" }
+                        : { color: "#6b6966", borderColor: "#e8e8e8", background: "#fff" }
                       }
                     >
                       <span>{s.title}</span>
@@ -215,13 +215,13 @@ export default function PrivacyPolicyPage() {
               </select>
             </div>
 
-            {/* Content */}
-            <div className="flex-1 min-w-0 space-y-4">
+            {/* Content Container */}
+            <div className="flex-1 min-w-0 border rounded-xl p-4 sm:p-5 space-y-4" style={{ borderColor: "#e8e8e8", background: "#fafafa" }}>
               {contentSections.map((section) => (
                 <div
                   key={section.id}
                   id={section.id}
-                  className="border rounded-xl p-0 overflow-hidden"
+                  className="border rounded-xl p-0 overflow-hidden bg-white"
                   style={{ borderColor: active === section.id ? "#3B82F6" : "#e8e8e8" }}
                 >
                   {/* Heading with divider */}
