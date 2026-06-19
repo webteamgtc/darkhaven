@@ -124,7 +124,7 @@ export default function TermsOfServicePage() {
   return (
     <main>
       <Navbar />
-      <section className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
+      <section className="relative py-16 sm:py-24 md:py-32 bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
             <span className="text-sm font-medium text-blue uppercase tracking-widest">Legal</span>
@@ -132,9 +132,9 @@ export default function TermsOfServicePage() {
             <p className="text-sm text-text-dark-3">Last updated: June 2026</p>
           </div>
 
-          <div className="grid lg:grid-cols-[260px_1fr] gap-8 lg:gap-12">
+          <div className="flex gap-8 lg:gap-12">
             {/* Sticky Sidebar */}
-            <nav className="hidden lg:block">
+            <nav className="hidden lg:block w-[260px] flex-shrink-0">
               <div className="sticky top-28">
                 <h3 className="text-xs font-semibold uppercase tracking-widest mb-4 text-blue">Contents</h3>
                 <div className="space-y-1.5">
@@ -159,7 +159,7 @@ export default function TermsOfServicePage() {
             </nav>
 
             {/* Mobile dropdown */}
-            <div className="lg:hidden mb-6">
+            <div className="lg:hidden mb-6 w-full">
               <select
                 onChange={(e) => scrollTo(e.target.value)}
                 value={active}
@@ -172,21 +172,28 @@ export default function TermsOfServicePage() {
             </div>
 
             {/* Content */}
-            <div className="space-y-0">
+            <div className="flex-1 min-w-0 space-y-4">
               {contentSections.map((section) => (
                 <div
                   key={section.id}
                   id={section.id}
-                  className="border-b py-6 sm:py-8"
-                  style={{ borderColor: "#f0f0f0" }}
+                  className="border rounded-xl p-0 overflow-hidden"
+                  style={{ borderColor: active === section.id ? "#3B82F6" : "#e8e8e8" }}
                 >
-                  <h2
-                    className="text-base sm:text-lg font-semibold mb-3 pb-3 border-b"
-                    style={{ color: "#2563EB", borderColor: "rgba(59,130,246,0.15)" }}
+                  {/* Heading with divider */}
+                  <div
+                    className="px-5 sm:px-6 py-3.5 sm:py-4 border-b"
+                    style={{ borderColor: active === section.id ? "rgba(59,130,246,0.2)" : "#f0f0f0", background: active === section.id ? "rgba(59,130,246,0.03)" : "#fafafa" }}
                   >
-                    {section.title}
-                  </h2>
-                  <div className="text-sm sm:text-base leading-relaxed">
+                    <h2
+                      className="text-sm sm:text-base font-semibold"
+                      style={{ color: active === section.id ? "#2563EB" : "#0f0d0c" }}
+                    >
+                      {section.title}
+                    </h2>
+                  </div>
+                  {/* Content body */}
+                  <div className="px-5 sm:px-6 py-4 sm:py-5 text-sm sm:text-base leading-relaxed">
                     {section.content}
                   </div>
                 </div>

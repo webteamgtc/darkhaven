@@ -24,12 +24,18 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isHeroVisible, setIsHeroVisible] = useState(true);
+  const [isHeroVisible, setIsHeroVisible] = useState(false);
 
   useEffect(() => {
+    // On sub-pages (no #home section), default to light mode immediately
+    const hasHero = !!document.getElementById("home");
+    if (!hasHero) setIsHeroVisible(false);
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      setIsHeroVisible(window.scrollY < window.innerHeight * 0.7);
+      if (hasHero) {
+        setIsHeroVisible(window.scrollY < window.innerHeight * 0.7);
+      }
       const sectionEls = navLinks.map((s) => document.getElementById(s.href.replace("#", "")));
       for (let i = sectionEls.length - 1; i >= 0; i--) {
         const el = sectionEls[i];
@@ -40,6 +46,7 @@ export default function Navbar() {
       }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // run once on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

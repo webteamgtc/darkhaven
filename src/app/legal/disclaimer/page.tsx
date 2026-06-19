@@ -10,7 +10,7 @@ export default function DisclaimerPage() {
   return (
     <main>
       <Navbar />
-      <section className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
+      <section className="relative py-16 sm:py-24 md:py-32 bg-white">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
             <span className="text-sm font-medium text-blue uppercase tracking-widest">Legal</span>
@@ -18,7 +18,7 @@ export default function DisclaimerPage() {
             <p className="text-sm text-text-dark-3">Last updated: June 2026</p>
           </div>
 
-          <div className="space-y-0">
+          <div className="space-y-4">
             {[
               {
                 title: "General Disclaimer",
@@ -63,16 +63,20 @@ export default function DisclaimerPage() {
             ].map((section, i) => (
               <div
                 key={i}
-                className="border-b py-6 sm:py-8"
-                style={{ borderColor: "#f0f0f0" }}
+                className="border rounded-xl p-0 overflow-hidden"
+                style={{ borderColor: "#e8e8e8" }}
               >
-                <h2
-                  className="text-base sm:text-lg font-semibold mb-3 pb-3 border-b"
-                  style={{ color: "#2563EB", borderColor: "rgba(59,130,246,0.15)" }}
+                {/* Heading with divider */}
+                <div
+                  className="px-5 sm:px-6 py-3.5 sm:py-4 border-b"
+                  style={{ borderColor: "#f0f0f0", background: "#fafafa" }}
                 >
-                  {section.title}
-                </h2>
-                <div className="text-sm sm:text-base leading-relaxed">
+                  <h2 className="text-sm sm:text-base font-semibold text-text-dark">
+                    {section.title}
+                  </h2>
+                </div>
+                {/* Content body */}
+                <div className="px-5 sm:px-6 py-4 sm:py-5 text-sm sm:text-base leading-relaxed">
                   {section.content}
                 </div>
               </div>
