@@ -15,7 +15,7 @@ export default function CTABanner() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-sm font-medium text-blue uppercase tracking-widest">Get Started</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
               Build the Next Generation of{" "}
               <span className="shimmer-blue">Digital Infrastructure</span>
             </h2>

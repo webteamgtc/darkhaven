@@ -37,7 +37,7 @@ export default function WhoWeServe() {
           className="text-center mb-10 sm:mb-16"
         >
           <span className="text-sm font-medium text-blue uppercase tracking-widest">Who We Serve</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
             Partners in <span className="shimmer-blue">Digital Transformation</span>
           </h2>
           <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">

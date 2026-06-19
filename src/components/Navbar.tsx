@@ -9,7 +9,6 @@ const navLinks = [
   { name: "Capabilities", href: "/capabilities" },
   { name: "Solutions", href: "/solutions" },
   { name: "Legal Center", href: "/legal" },
-  { name: "Contact", href: "/#contact" },
 ];
 
 const tickerItems = [

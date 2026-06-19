@@ -53,7 +53,7 @@ export default function OurValues() {
           className="text-center mb-10 sm:mb-16"
         >
           <span className="text-sm font-medium text-gold-dark uppercase tracking-widest">Our Values</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
             The Pillars of <span className="shimmer-gold">Conviction</span>
           </h2>
           <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">

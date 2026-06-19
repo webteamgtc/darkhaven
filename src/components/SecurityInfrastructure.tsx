@@ -141,7 +141,7 @@ export default function SecurityInfrastructure() {
             >
               Security &amp; Infrastructure
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] text-white mb-4 sm:mb-5">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-[1.1] text-white mb-4 sm:mb-5">
               Security &amp; Infrastructure Standards
             </h2>
             <p className="text-base leading-relaxed max-w-xl" style={{ color: "rgba(255,255,255,0.65)" }}>

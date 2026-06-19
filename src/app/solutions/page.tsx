@@ -53,7 +53,7 @@ export default function SolutionsPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <span className="text-sm font-medium text-blue uppercase tracking-widest">Solutions</span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-4 mb-6 text-text-dark">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4 mb-6 text-text-dark">
               Solutions for <span className="shimmer-blue">Every Scale</span>
             </h1>
             <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
