@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -8,14 +9,20 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
     }
 
-    const apiKey = process.env.MAILGUN_API_KEY!;
-    const domain = process.env.MAILGUN_DOMAIN!;
-    const toEmail = process.env.CONTACT_TO_EMAIL!;
-    const fromEmail = process.env.CONTACT_FROM_EMAIL!;
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 465,
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-    const body = new URLSearchParams({
-      from: `Darkhaven Contact Form <${fromEmail}>`,
-      to: toEmail,
+    await transporter.sendMail({
+      from: `Darkhaven Contact Form <${process.env.SMTP_USER}>`,
+      to: process.env.CONTACT_TO_EMAIL,
+      replyTo: email,
       subject: `New Contact: ${firstName} ${lastName} — ${interest}`,
       text: [
         `Name: ${firstName} ${lastName}`,
@@ -40,30 +47,12 @@ export async function POST(req: NextRequest) {
           <p style="margin-top:20px;font-size:12px;color:#9ca3af;">Sent from darkhaven.ai contact form</p>
         </div>
       `,
-      "h:Reply-To": email,
     });
 
-    const response = await fetch(
-      `https://api.mailgun.net/v3/${domain}/messages`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Basic ${Buffer.from(`api:${apiKey}`).toString("base64")}`,
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: body.toString(),
-      }
-    );
-
-    if (!response.ok) {
-      const err = await response.text();
-      console.error("Mailgun error:", err);
-      return NextResponse.json({ error: `Mailgun: ${err}` }, { status: 500 });
-    }
-
     return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error("Contact API error:", err);
-    return NextResponse.json({ error: "Server error." }, { status: 500 });
+  } catch (err: unknown) {
+    const errorMessage = err instanceof Error ? err.message : "Server error.";
+    console.error("Contact API error:", errorMessage);
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
