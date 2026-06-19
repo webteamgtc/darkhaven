@@ -32,7 +32,7 @@ function NetworkBackground() {
     renderer.domElement.style.opacity = "0";
     renderer.domElement.style.transition = "opacity 2s ease";
     mount.appendChild(renderer.domElement);
-    setTimeout(() => { renderer.domElement.style.opacity = "0.7"; }, 100);
+    setTimeout(() => { renderer.domElement.style.opacity = "1"; }, 100);
 
     // Scene
     const scene = new THREE.Scene();
@@ -65,7 +65,7 @@ function NetworkBackground() {
     const torus = new THREE.Object3D();
     gsap.to(torus.rotation, {
       y: Math.PI * 2,
-      duration: 90,
+      duration: 220,
       ease: "none",
       repeat: -1,
     });
