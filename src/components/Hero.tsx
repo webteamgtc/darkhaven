@@ -306,7 +306,7 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue/[0.06] rounded-full blur-[200px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/[0.04] rounded-full blur-[180px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-4 text-center py-24 sm:py-32">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-4 text-center py-24 sm:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -318,19 +318,40 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-5 sm:mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.2] mb-5 sm:mb-6"
         >
-          {["Where", "Intelligence", "Meets", "Infrastructure"].map((word, i) => (
-            <motion.span
-              key={word}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + i * 0.22 }}
-              className="shimmer-blue inline-block mr-[0.25em]"
-            >
-              {word}{i === 1 ? <br /> : ""}
-            </motion.span>
-          ))}
+          {/* Line 1: Where Intelligence */}
+          <span className="block">
+            {["Where", "Intelligence"].map((word, i) => (
+              <motion.span
+                key={word}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + i * 0.22 }}
+                className={`inline-block mr-[0.25em] ${
+                  word === "Intelligence" ? "shimmer-blue" : "text-white"
+                }`}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </span>
+          {/* Line 2: Meets Infrastructure */}
+          <span className="block">
+            {["Meets", "Infrastructure"].map((word, i) => (
+              <motion.span
+                key={word}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.84 + i * 0.22 }}
+                className={`inline-block mr-[0.25em] ${
+                  word === "Meets" ? "shimmer-blue" : "text-white"
+                }`}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </span>
         </motion.h1>
 
         <motion.p
