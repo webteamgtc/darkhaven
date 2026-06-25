@@ -366,7 +366,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-base sm:text-lg md:text-lg text-text-light-2 max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-2 sm:px-0"
+          className="text-base sm:text-lg md:text-lg text-text-light-2 max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-2 sm:px-0"
         >
           We help turn complex operational needs into clear, structured technology foundations.
         </motion.p>
