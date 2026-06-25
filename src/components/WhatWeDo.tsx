@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const pillars = [
   {
-    title: "Intelligent Data Systems",
-    summary: "Structured data ecosystems for modern enterprises",
-    description: "We design structured data systems that enable organizations to collect, process, and operationalize information efficiently across distributed environments.",
-    features: ["Data Processing", "Real-Time Integration", "Distribution Systems", "Analytics"],
+    title: "Data Systems & Integration",
+    summary: "Structured data workflows and integration layers",
+    description: "We design structured data workflows and integration layers that help teams organise information and connect essential systems.",
+    features: ["Data Architecture", "API Integration", "Data Pipelines", "Reporting Systems"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
@@ -15,10 +15,10 @@ const pillars = [
     ),
   },
   {
-    title: "AI & Software Engineering",
-    summary: "Intelligent frameworks for automation and decision support",
-    description: "We build artificial intelligence frameworks and enterprise software solutions that support automation, decision systems, and operational intelligence.",
-    features: ["AI Frameworks", "Automation", "Decision Systems", "Operational Intelligence"],
+    title: "AI Applications & Software Engineering",
+    summary: "Practical AI-enabled tools and software solutions",
+    description: "We build practical AI-enabled tools and software solutions designed around real business workflows.",
+    features: ["AI Applications", "Automation", "Internal Tools", "Workflow Design"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
@@ -26,10 +26,10 @@ const pillars = [
     ),
   },
   {
-    title: "Digital Infrastructure & Backend",
-    summary: "Scalable backend architectures for enterprise reliability",
-    description: "We develop scalable backend architectures, cloud-based systems, and enterprise infrastructure that ensure reliability, security, and performance.",
-    features: ["Cloud Systems", "Backend Architecture", "Enterprise Infrastructure", "High Availability"],
+    title: "Infrastructure & Backend Architecture",
+    summary: "Technical foundations for scalable digital products",
+    description: "We support the technical foundations behind scalable digital products, including backend services, APIs, and cloud-ready system design.",
+    features: ["Backend Systems", "API Design", "Cloud Architecture", "System Planning"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
