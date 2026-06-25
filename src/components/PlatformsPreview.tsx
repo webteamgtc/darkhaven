@@ -75,8 +75,9 @@ export default function PlatformsPreview() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
-          {platforms.map((p) => (
+        {/* Row 1 - 4 cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 mb-4 sm:mb-5">
+          {platforms.slice(0, 4).map((p) => (
             <Link
               key={p.id}
               href={`/platforms#${p.id}`}
@@ -91,24 +92,46 @@ export default function PlatformsPreview() {
                   {p.tag}
                 </span>
               </div>
-
-              {/* Label */}
               <p className="text-[11px] font-semibold text-blue uppercase tracking-widest mb-1">{p.label}</p>
-
-              {/* Title */}
               <h3 className="text-sm sm:text-[15px] font-semibold text-text-dark mb-2 leading-snug group-hover:text-blue transition-colors">
                 {p.title}
               </h3>
-
-              {/* Desc */}
-              <p className="text-text-dark-3 text-xs sm:text-sm leading-relaxed flex-1">
-                {p.desc}
-              </p>
-
-              {/* Arrow CTA */}
+              <p className="text-text-dark-3 text-xs sm:text-sm leading-relaxed flex-1">{p.desc}</p>
               <div className="mt-4 flex items-center gap-1.5 text-blue text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                 Explore platform
-                <svg className="w-3.5 h-3.5 translate-x-0 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Row 2 - 3 cards full width */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+          {platforms.slice(4).map((p) => (
+            <Link
+              key={p.id}
+              href={`/platforms#${p.id}`}
+              className="group bg-light rounded-2xl border border-light-2 p-5 sm:p-6 hover:border-blue/25 hover:shadow-xl hover:shadow-blue/8 transition-all duration-300 flex flex-col"
+            >
+              {/* Icon + Tag row */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-11 h-11 rounded-xl bg-blue/[0.08] border border-blue/15 flex items-center justify-center text-xl group-hover:bg-blue/[0.14] transition-colors flex-shrink-0">
+                  {p.icon}
+                </div>
+                <span className="text-[10px] font-semibold text-blue bg-blue/[0.07] border border-blue/15 px-2 py-1 rounded-full whitespace-nowrap">
+                  {p.tag}
+                </span>
+              </div>
+              <p className="text-[11px] font-semibold text-blue uppercase tracking-widest mb-1">{p.label}</p>
+              <h3 className="text-sm sm:text-[15px] font-semibold text-text-dark mb-2 leading-snug group-hover:text-blue transition-colors">
+                {p.title}
+              </h3>
+              <p className="text-text-dark-3 text-xs sm:text-sm leading-relaxed flex-1">{p.desc}</p>
+              <div className="mt-4 flex items-center gap-1.5 text-blue text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                Explore platform
+                <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </div>
