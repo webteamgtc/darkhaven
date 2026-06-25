@@ -8,36 +8,38 @@ export const metadata = {
 
 const capabilities = [
   {
-    title: "Intelligent Data Systems",
-    description: "We design structured data systems that enable organizations to collect, process, and operationalize information efficiently across distributed environments.",
+    title: "Data Systems & Integration",
+    description: "We help organisations structure operational data, map information workflows, and plan integrations between essential systems.",
     items: [
-      "Real-time data processing & analytics",
-      "Distributed data architecture design",
-      "Automated data pipeline engineering",
-      "Enterprise data governance frameworks",
-      "Cross-platform data integration systems",
+      "Data structure and workflow mapping",
+      "Data pipeline planning",
+      "API and system integration design",
+      "Reporting and dashboard foundations",
+      "Data access and governance considerations",
     ],
   },
   {
-    title: "AI & Software Engineering",
-    description: "We build artificial intelligence frameworks and enterprise software solutions that support automation, decision systems, and operational intelligence.",
+    title: "AI Applications & Software Engineering",
+    description: "We support the planning and development of AI-enabled applications, internal tools, and workflow automation solutions.",
     items: [
-      "Custom AI/ML model development",
-      "Decision system architecture",
-      "Enterprise software engineering",
-      "Process automation platforms",
-      "Operational intelligence tools",
+      "AI use-case discovery",
+      "AI-enabled application development",
+      "Internal tools and workflow systems",
+      "Automation design",
+      "Backend and API development",
+      "Technical proof-of-concept support",
     ],
   },
   {
-    title: "Digital Infrastructure & Backend Systems",
-    description: "We develop scalable backend architectures, cloud-based systems, and enterprise infrastructure that ensure reliability, security, and performance.",
+    title: "Backend Systems & Digital Infrastructure",
+    description: "We support the design and development of backend services, APIs, cloud-ready environments, and technical foundations for digital products.",
     items: [
-      "Cloud infrastructure engineering",
-      "Scalable backend system design",
-      "API & microservices architecture",
-      "High-availability system deployment",
-      "Infrastructure monitoring & optimization",
+      "Backend architecture planning",
+      "API and integration services",
+      "Cloud environment setup",
+      "Deployment workflow design",
+      "System documentation and handover",
+      "Monitoring and maintenance planning",
     ],
   },
 ];
@@ -49,12 +51,11 @@ export default function CapabilitiesPage() {
       <section className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <span className="text-sm font-medium text-blue uppercase tracking-widest">Our Capabilities</span>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4 mb-6 text-text-dark">
-              Enterprise-Grade <span className="shimmer-blue">Technology Capabilities</span>
+              Technology Services &amp; <span className="shimmer-blue">Capabilities</span>
             </h1>
             <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Darkhaven delivers structured, scalable, and intelligent technology solutions across three core capability domains.
+              Darkhaven supports organisations with technology planning, software development, data systems, and digital infrastructure projects.
             </p>
           </div>
 
