@@ -8,39 +8,43 @@ export const metadata = {
 
 const solutions = [
   {
-    title: "For Enterprise Technology Teams",
-    description: "Supporting internal system modernization and digital transformation for organizations upgrading their technology stack.",
+    label: "TECHNOLOGY TEAMS",
+    title: "For Internal Technology Teams",
+    description: "Supporting teams that are planning system improvements, software upgrades, or new digital workflows.",
     features: [
-      { name: "System Modernization", detail: "Legacy system migration and upgrade roadmaps" },
-      { name: "Digital Transformation", detail: "End-to-end digital strategy and implementation" },
-      { name: "Infrastructure Upgrade", detail: "Cloud migration and hybrid infrastructure design" },
+      { name: "System Review", detail: "Assessing current systems and identifying technical priorities" },
+      { name: "Upgrade Planning", detail: "Supporting migration, modernization, and improvement roadmaps" },
+      { name: "Integration Planning", detail: "Exploring how systems, data, and workflows can connect more effectively" },
     ],
   },
   {
-    title: "For AI-Driven Startups",
-    description: "Building scalable AI and data infrastructure foundations for the next generation of intelligent applications.",
+    label: "AI-FOCUSED STARTUPS",
+    title: "For AI-Focused Startups",
+    description: "Supporting early-stage teams exploring AI-enabled products, data workflows, and technical foundations.",
     features: [
-      { name: "AI Infrastructure", detail: "MLOps pipelines and model deployment frameworks" },
-      { name: "Data Pipelines", detail: "Scalable data ingestion and processing systems" },
-      { name: "Scalable Architecture", detail: "Architecture designed for rapid growth" },
+      { name: "AI Use-Case Discovery", detail: "Identifying practical opportunities for AI within a product or workflow" },
+      { name: "Data Workflow Planning", detail: "Structuring how information can be collected, processed, and used" },
+      { name: "Product Architecture Support", detail: "Planning adaptable technical foundations for early product development" },
     ],
   },
   {
-    title: "For Software-First Companies",
-    description: "Providing backend engineering and system architecture support for companies building software-centric products.",
+    label: "SOFTWARE PRODUCT TEAMS",
+    title: "For Software Product Teams",
+    description: "Supporting product-focused companies with backend planning, application development, and integration requirements.",
     features: [
-      { name: "Backend Engineering", detail: "High-performance backend system development" },
-      { name: "System Architecture", detail: "Microservices and distributed system design" },
-      { name: "API Design", detail: "RESTful and GraphQL API architecture" },
+      { name: "Backend Development Support", detail: "Assisting with backend services and application logic" },
+      { name: "System Architecture Planning", detail: "Mapping technical components, workflows, and service requirements" },
+      { name: "API & Integration Design", detail: "Planning APIs and connections between digital systems" },
     ],
   },
   {
-    title: "For Institutional Organizations",
-    description: "Delivering secure, high-performance digital systems for organizations requiring enterprise-grade reliability.",
+    label: "STRUCTURED ORGANISATIONS",
+    title: "For Organisations with Complex Requirements",
+    description: "Supporting organisations that require clearer technical planning, structured workflows, and considered system design.",
     features: [
-      { name: "Enterprise Security", detail: "Security-first architecture and compliance frameworks" },
-      { name: "High Performance", detail: "Optimized systems for mission-critical workloads" },
-      { name: "Compliance Ready", detail: "Built-in audit and governance capabilities" },
+      { name: "Security Considerations", detail: "Considering access, permissions, and data handling during system planning" },
+      { name: "Reliability Planning", detail: "Including maintainability, recovery, and continuity considerations in project design" },
+      { name: "Documentation Support", detail: "Supporting technical documentation, process mapping, and handover requirements" },
     ],
   },
 ];
@@ -68,7 +72,7 @@ export default function SolutionsPage() {
                 className="bg-light rounded-2xl border border-light-2 p-6 sm:p-8 hover:shadow-lg hover:shadow-blue/5 transition-all duration-300"
               >
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue/[0.08] border border-blue/15 mb-4">
-                  <span className="text-xs font-semibold text-blue">{sol.title.split(" ").slice(-2).join(" ")}</span>
+                  <span className="text-xs font-semibold text-blue">{sol.label}</span>
                 </div>
                 <h2 className="text-lg sm:text-xl font-semibold text-text-dark mb-3">{sol.title}</h2>
                 <p className="text-text-dark-3 text-sm sm:text-base leading-relaxed mb-6">{sol.description}</p>

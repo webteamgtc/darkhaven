@@ -100,29 +100,7 @@ export default function CTABanner() {
                 </div>
               </a>
             </div>
-            <div className="space-y-3">
-              {[
-                "Dedicated onboarding specialist",
-                "Custom integration roadmap",
-                "90-day performance guarantee",
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-5 h-5 rounded-full bg-green/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-3 h-3 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-text-dark-2 text-sm">{item}</span>
-                </motion.div>
-              ))}
-            </div>
+    
           </motion.div>
 
           <motion.div

@@ -300,7 +300,7 @@ export default function Hero() {
     return () => clearInterval(t);
   }, []);
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-10">
+    <section id="home" className="relative min-h-[600px] flex items-center justify-center overflow-hidden pt-10">
       <div className="absolute inset-0 bg-dark" />
       <NetworkBackground />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue/[0.06] rounded-full blur-[200px] pointer-events-none" />
