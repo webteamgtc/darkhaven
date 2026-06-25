@@ -360,24 +360,21 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-base sm:text-lg md:text-lg text-text-light-2 max-w-3xl mx-auto mb-5 leading-relaxed font-light"
         >
-          Darkhaven builds AI-driven systems, data infrastructure, and enterprise software
-          solutions that power modern digital operations and scalable business environments.
-          
+          Darkhaven designs AI-enabled software, data systems, and digital infrastructure for organisations building their next stage of growth.
         </motion.p>
-    <motion.p
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
           className="text-base sm:text-lg md:text-lg text-text-light-2 max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-2 sm:px-0"
         >
-         
-          We help organizations transform complexity into structured, intelligent systems.
+          We help turn complex operational needs into clear, structured technology foundations.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           {/* Gold shining button */}
@@ -385,7 +382,7 @@ export default function Hero() {
             href="/capabilities"
             className="px-8 py-3.5 text-sm font-semibold bg-gradient-to-r from-gold-dark via-gold-light to-gold text-dark rounded-full hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 relative overflow-hidden group"
           >
-            <span className="relative z-10">Explore Capabilities</span>
+            <span className="relative z-10">Explore Our Capabilities</span>
             <div className="absolute inset-0 bg-gradient-to-r from-gold-shine via-white/30 to-gold-shine -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
           </a>
           {/* Blue shining button */}
@@ -393,7 +390,7 @@ export default function Hero() {
             href="/#contact"
             className="px-8 py-3.5 text-sm font-semibold bg-gradient-to-r from-blue-deep via-blue-light to-blue text-white rounded-full hover:shadow-xl hover:shadow-blue/30 transition-all duration-300 flex items-center gap-2 relative overflow-hidden group"
           >
-            <span className="relative z-10">Contact Us</span>
+            <span className="relative z-10">Start a Conversation</span>
             <svg className="w-4 h-4 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

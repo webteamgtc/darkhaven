@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const values = [
   {
     title: "Integrity",
-    description: "We build with transparency, responsibility, and long-term trust.",
+    description: "We communicate clearly, work responsibly, and aim to build long-term trust through transparent collaboration.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
@@ -14,7 +14,7 @@ const values = [
   },
   {
     title: "Excellence",
-    description: "We focus on precision engineering and system reliability.",
+    description: "We value careful thinking, practical engineering, and continuous improvement in the work we deliver.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
@@ -23,7 +23,7 @@ const values = [
   },
   {
     title: "Client-First Engineering",
-    description: "Every solution is designed around real operational needs.",
+    description: "We begin with real operational needs and design technology around the people and teams who will use it.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
@@ -32,7 +32,7 @@ const values = [
   },
   {
     title: "Innovation",
-    description: "We continuously evolve our technology stack to meet future demands.",
+    description: "We explore emerging technologies with a focus on practical value, not novelty alone.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.166a6.001 6.001 0 00-2.258-11.585 6.001 6.001 0 00-2.258 11.585c.85.343 1.508 1.183 1.508 2.166V18" />
@@ -54,7 +54,7 @@ export default function OurValues() {
         >
           <span className="text-sm font-medium text-gold-dark uppercase tracking-widest">Our Values</span>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark">
-            The Pillars of <span className="shimmer-gold">Conviction</span>
+            The Principles Behind <span className="shimmer-gold">Our Work</span>
           </h2>
           <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0">
             Four foundational principles that guide every decision, every solution,

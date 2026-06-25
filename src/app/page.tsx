@@ -14,7 +14,6 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <StatsBar />
       <WhoWeAre />
       <WhatWeDo />
       <WhoWeServe />

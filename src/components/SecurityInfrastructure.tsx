@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const trustCards = [
   {
-    title: "Security-First Architecture",
-    text: "Security is embedded at the system level across all infrastructure layers, ensuring consistent protection from data to application environments.",
+    title: "Security-Aware Design",
+    text: "We consider security requirements during system planning, architecture decisions, and software development.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-[22px] h-[22px]">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -13,8 +13,8 @@ const trustCards = [
     ),
   },
   {
-    title: "Data Protection Framework",
-    text: "Structured data governance models with controlled access, encryption standards, and secure lifecycle management.",
+    title: "Data Handling Considerations",
+    text: "We help define structured approaches to data access, storage, and system-level permissions.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-[22px] h-[22px]">
         <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -26,8 +26,8 @@ const trustCards = [
     ),
   },
   {
-    title: "High-Availability Engineering",
-    text: "Infrastructure designed for fault tolerance, redundancy, and continuous system uptime across distributed environments.",
+    title: "Reliability Planning",
+    text: "We design systems with maintainability, recovery considerations, and operational continuity in mind.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-[22px] h-[22px]">
         <circle cx="12" cy="12" r="3" />
@@ -43,8 +43,8 @@ const trustCards = [
     ),
   },
   {
-    title: "Operational Governance",
-    text: "Internal compliance frameworks aligned with global security and operational best practices.",
+    title: "Documentation & Governance Support",
+    text: "We can support documentation, access workflows, and technical governance requirements as part of a project scope.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-[22px] h-[22px]">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -55,15 +55,6 @@ const trustCards = [
   },
 ];
 
-const trustTags = [
-  "Security Architecture Design",
-  "Data Encryption Standards",
-  "Access Control Systems",
-  "Infrastructure Monitoring",
-  "Risk Control Frameworks",
-  "Audit-Ready Systems",
-  "Enterprise Governance Models",
-];
 
 export default function SecurityInfrastructure() {
   return (
@@ -142,11 +133,10 @@ export default function SecurityInfrastructure() {
               Security &amp; Infrastructure
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-[1.1] text-white mb-4 sm:mb-5">
-              Security &amp; Infrastructure Standards
+              Security Considerations in Our Work
             </h2>
             <p className="text-base leading-relaxed max-w-xl" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Enterprise-grade security architecture designed for system integrity, data protection,
-              and operational resilience across distributed environments.
+              We consider security, access control, data handling, and operational resilience throughout the planning and development process.
             </p>
           </motion.div>
 
@@ -256,50 +246,6 @@ export default function SecurityInfrastructure() {
           </div>
         </div>
 
-        {/* Layer 3: Trust Tags */}
-        <div className="pt-10 sm:pt-14 lg:pt-16">
-          <div className="flex gap-3 overflow-x-auto pb-2" style={{ scrollbarWidth: "none", WebkitMaskImage: "linear-gradient(90deg, black 90%, transparent 100%)" }}>
-            {trustTags.map((tag, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="flex-shrink-0 rounded-full px-4 py-2.5 text-[13px] font-medium cursor-default transition-all duration-250 hover:text-white"
-                style={{
-                  background: "rgba(45,107,255,0.08)",
-                  border: "1px solid rgba(45,107,255,0.25)",
-                  color: "rgba(255,255,255,0.85)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(45,107,255,0.16)";
-                  e.currentTarget.style.borderColor = "rgba(45,107,255,0.45)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(45,107,255,0.08)";
-                  e.currentTarget.style.borderColor = "rgba(45,107,255,0.25)";
-                }}
-              >
-                {tag}
-              </motion.span>
-            ))}
-          </div>
-        </div>
-
-        {/* Layer 4: Footer Trust Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="pt-10 sm:pt-14 lg:pt-16 text-center"
-        >
-          <p className="text-sm leading-relaxed max-w-4xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
-            Darkhaven builds structured, auditable, and scalable infrastructure systems designed
-            for long-term operational resilience.
-          </p>
-        </motion.div>
       </div>
 
       {/* Custom keyframes via style tag workaround — use Tailwind @keyframes in globals.css instead */}
