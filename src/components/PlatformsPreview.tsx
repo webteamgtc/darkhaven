@@ -5,7 +5,7 @@ const platforms = [
     id: "trading-system",
     icon: "⚡",
     label: "Trading System",
-    title: "Max Tech Trading System",
+    title: "Darkhaven Trading System",
     desc: "Institutional-grade forex & crypto trading platform with advanced execution, liquidity aggregation, and white-label support.",
     tag: "Forex · Crypto",
   },
@@ -29,7 +29,7 @@ const platforms = [
     id: "ai-stock-selection",
     icon: "🤖",
     label: "AI Stock Selection",
-    title: "Max TechQuant AI Multi Factor Stock Selection",
+    title: "Darkhaven AI Quant Stock Selection",
     desc: "Global AI-powered quantitative stock selection combining hundreds of factors, machine learning, and real-time portfolio monitoring.",
     tag: "AI · Quant",
   },
@@ -37,7 +37,7 @@ const platforms = [
     id: "futures-arbitrage",
     icon: "📉",
     label: "Hedge Arbitrage",
-    title: "Futures Quantitative Hedge Arbitrage System",
+    title: "Darkhaven Futures Hedge Arbitrage System",
     desc: "Quantitative hedge arbitrage for futures markets — automated trading, extreme value recognition, and strict risk controls.",
     tag: "Futures · Quant",
   },
@@ -45,7 +45,7 @@ const platforms = [
     id: "forex-ea",
     icon: "🧠",
     label: "Forex EA",
-    title: "Forex EA Quantitative Asset Management",
+    title: "Darkhaven Forex EA Asset Management",
     desc: "AI-driven autonomous forex trading with deep learning, multi-strategy execution, and 24/5 all-weather cloud deployment.",
     tag: "Forex · AI",
   },
@@ -53,7 +53,7 @@ const platforms = [
     id: "ai-customer-service",
     icon: "💬",
     label: "AI Support",
-    title: "Max Tech AI Customer Service System",
+    title: "Darkhaven AI Customer Service System",
     desc: "GPT-powered autonomous customer service handling 10,000+ inquiries per minute — 24/7, multi-channel, and low-cost.",
     tag: "GPT · Automation",
   },
@@ -75,7 +75,7 @@ export default function PlatformsPreview() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
           {platforms.map((p) => (
             <Link
               key={p.id}

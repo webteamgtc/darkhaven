@@ -9,11 +9,11 @@ import Footer from "@/components/Footer";
 const sections = [
   {
     id: "trading-system",
-    nav: "Max Tech Trading System",
-    title: "Max Tech Trading System",
+    nav: "Darkhaven Trading System",
+    title: "Darkhaven Trading System",
     subtitle: "Forex and Digital Currency Trading System",
     description:
-      "Max Tech is an institutional level forex and cryptocurrency trading system designed to provide comprehensive solutions for brokers and exchanges to meet the needs of their traders. Its powerful features and reliable performance make it one of the leading trading platforms in the industry.",
+      "Darkhaven is an institutional level forex and cryptocurrency trading system designed to provide comprehensive solutions for brokers and exchanges to meet the needs of their traders. Its powerful features and reliable performance make it one of the leading trading platforms in the industry.",
     features: [
       {
         icon: "⚡",
@@ -186,11 +186,11 @@ const sections = [
   },
   {
     id: "ai-stock-selection",
-    nav: "Max TechQuant AI Multi Factor Stock Selection",
-    title: "Max TechQuant Global AI Multi Factor Investment Model Stock Selection System",
+    nav: "Darkhaven AI Quant Stock Selection",
+    title: "Darkhaven AI Multi Factor Investment Model Stock Selection System",
     subtitle: "AI-Powered Quantitative Stock Selection",
     description:
-      "Max TechQuant is an innovative global AI multi factor investment model stock selection system designed to meet investors' demand for quantitative automatic stock selection in the global securities market. It integrates cutting-edge AI models and machine learning technologies, providing investors with unprecedented investment experience and protection.",
+      "Darkhaven TechQuant is an innovative global AI multi factor investment model stock selection system designed to meet investors' demand for quantitative automatic stock selection in the global securities market. It integrates cutting-edge AI models and machine learning technologies, providing investors with unprecedented investment experience and protection.",
     features: [
       {
         icon: "🌏",
@@ -245,17 +245,17 @@ const sections = [
       {
         icon: "🎭",
         title: "Suitable For Various Investors",
-        desc: "Whether experienced professionals or beginners, Max TechQuant can meet different investment needs and risk tolerance.",
+        desc: "Whether experienced professionals or beginners, Darkhaven can meet different investment needs and risk tolerance.",
       },
     ],
   },
   {
     id: "futures-arbitrage",
-    nav: "Max Tech Futures Quantitative Hedge Arbitrage",
-    title: "Max Tech Futures Quantitative Hedge Arbitrage Trading System",
+    nav: "Darkhaven Futures Hedge Arbitrage",
+    title: "Darkhaven Futures Quantitative Hedge Arbitrage Trading System",
     subtitle: "Quantitative Hedge Arbitrage for Futures Markets",
     description:
-      "Hedging arbitrage is a trading strategy that reduces risk and profits by simultaneously buying and selling related futures contracts. The Max Tech system uses quantitative models to analyze historical data, identify extreme points of futures contract spreads, and profit from the regression or convergence of spreads. Max Tech Futures Quantitative Hedge Arbitrage Trading System is an innovative trading system designed specifically for quantitative hedge arbitrage trading in the futures market. It combines cutting-edge quantitative technology and advanced arbitrage strategies, providing investors with stable profits and minimal risk investment opportunities.",
+      "Hedging arbitrage is a trading strategy that reduces risk and profits by simultaneously buying and selling related futures contracts. The Darkhaven system uses quantitative models to analyze historical data, identify extreme points of futures contract spreads, and profit from the regression or convergence of spreads. Darkhaven Futures Quantitative Hedge Arbitrage Trading System is an innovative trading system designed specifically for quantitative hedge arbitrage trading in the futures market. It combines cutting-edge quantitative technology and advanced arbitrage strategies, providing investors with stable profits and minimal risk investment opportunities.",
     features: [
       {
         icon: "📉",
@@ -311,11 +311,11 @@ const sections = [
   },
   {
     id: "forex-ea",
-    nav: "Max Tech Forex EA Quantitative Asset Management",
-    title: "Max Tech Forex EA Quantitative Asset Management System",
+    nav: "Darkhaven Forex EA Asset Management",
+    title: "Darkhaven Forex EA Quantitative Asset Management System",
     subtitle: "AI-Powered Autonomous Forex Trading",
     description:
-      "Max Tech Forex EA Quantitative Asset Management System is a powerful trading system designed specifically for quantitative trading in the forex market. It combines artificial intelligence (AI) technology, deep learning, and autonomous trading, providing investors with stable profit and risk avoidance investment opportunities. The Max Tech system utilizes advanced AI algorithms and deep learning models to analyze historical data and real-time market dynamics, and identify trading opportunities. It utilizes autonomous trading function to automatically execute trading instructions without the need for manual intervention.",
+      "Darkhaven Forex EA Quantitative Asset Management System is a powerful trading system designed specifically for quantitative trading in the forex market. It combines artificial intelligence (AI) technology, deep learning, and autonomous trading, providing investors with stable profit and risk avoidance investment opportunities. The Darkhaven system utilizes advanced AI algorithms and deep learning models to analyze historical data and real-time market dynamics, and identify trading opportunities. It utilizes autonomous trading function to automatically execute trading instructions without the need for manual intervention.",
     features: [
       {
         icon: "🧠",
@@ -366,11 +366,11 @@ const sections = [
   },
   {
     id: "ai-customer-service",
-    nav: "Max Tech AI Customer Service System",
-    title: "Max Tech AI Customer Service System",
+    nav: "Darkhaven AI Customer Service System",
+    title: "Darkhaven AI Customer Service System",
     subtitle: "Autonomous GPT-Powered Customer Support",
     description:
-      "The Max Tech AI Customer Service System is an autonomous AI customer service system trained using GPT, designed to provide businesses with a 24/7, efficient, and low-cost customer service solution. The Max Tech system leverages a pre-trained GPT model, utilizing natural language processing and machine learning technologies to understand various customer inquiries and generate accurate, comprehensive responses. It can autonomously handle customer inquiries in private domains, achieving automated sales and customer service.",
+      "The Darkhaven AI Customer Service System is an autonomous AI customer service system trained using GPT, designed to provide businesses with a 24/7, efficient, and low-cost customer service solution. The Darkhaven system leverages a pre-trained GPT model, utilizing natural language processing and machine learning technologies to understand various customer inquiries and generate accurate, comprehensive responses. It can autonomously handle customer inquiries in private domains, achieving automated sales and customer service.",
     features: [
       {
         icon: "🤖",
@@ -404,7 +404,7 @@ const sections = [
       },
     ],
     footer:
-      "The Max Tech AI Customer Service System is a powerful, efficient, and cost-effective customer service solution that helps businesses improve customer satisfaction, reduce operational costs, and increase efficiency. By leveraging advanced AI technology, the system can handle customer inquiries around the clock and provide comprehensive customer support for companies.",
+      "The Darkhaven AI Customer Service System is a powerful, efficient, and cost-effective customer service solution that helps businesses improve customer satisfaction, reduce operational costs, and increase efficiency. By leveraging advanced AI technology, the system can handle customer inquiries around the clock and provide comprehensive customer support for companies.",
   },
 ];
 
