@@ -84,6 +84,21 @@ export default function CTABanner() {
                   <p className="text-sm font-medium text-text-dark group-hover:text-blue transition-colors">(657) 531-9327</p>
                 </div>
               </a>
+              <a href="https://maps.google.com/?q=300+Spectrum+Center+Dr+Suite+400,+Irvine,+CA+92618" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                <div className="w-9 h-9 rounded-xl bg-blue/10 border border-blue/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue/15 transition-colors">
+                  <svg className="w-4 h-4 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-text-dark-3 uppercase tracking-wider mb-0.5">Address</p>
+                  <p className="text-sm font-medium text-text-dark group-hover:text-blue transition-colors leading-snug">
+                    300 Spectrum Center Dr Suite 400<br />
+                    Irvine, CA 92618
+                  </p>
+                </div>
+              </a>
             </div>
             <div className="space-y-3">
               {[

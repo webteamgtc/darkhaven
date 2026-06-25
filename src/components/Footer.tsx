@@ -57,13 +57,14 @@ export default function Footer() {
           <span className="text-xs text-blue-light/60">
             &copy; {new Date().getFullYear()} Darkhaven. All rights reserved.
           </span>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-4 gap-y-1">
             <div className="flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-green-light animate-pulse" />
               <span className="text-[11px] text-green-light font-medium">All Systems Operational</span>
             </div>
             <a href="mailto:support@darkhaven.ai" className="text-[11px] text-blue-light/60 hover:text-blue-light transition-colors">support@darkhaven.ai</a>
             <a href="tel:6575319327" className="text-[11px] text-blue-light/60 hover:text-blue-light transition-colors">(657) 531-9327</a>
+            <span className="text-[11px] text-blue-light/60">300 Spectrum Center Dr Suite 400, Irvine, CA 92618</span>
           </div>
         </div>
       </div>
