@@ -59,6 +59,35 @@ export default function WhoWeAre() {
               Our approach combines structured planning, engineering discipline, and adaptable technology design.
             </motion.p>
 
+            {/* Our Focus */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="space-y-3"
+            >
+              <h3 className="text-text-dark font-semibold text-base mb-3">Our Focus</h3>
+              {[
+                "AI-enabled business systems",
+                "Data architecture and integration",
+                "Software and platform engineering",
+                "Digital infrastructure design",
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.6 + i * 0.06 }}
+                  className="flex items-center gap-3 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue flex-shrink-0" />
+                  <span className="text-text-dark-2 text-sm">{item}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+
           </div>
 
           {/* Credentials */}
