@@ -450,7 +450,7 @@ export default function PlatformsPage() {
 
       {/* Page Header */}
       <div className="pt-20 pb-10 sm:pt-28 sm:pb-12 bg-gradient-to-b from-slate-50 to-white border-b border-black/[0.06]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto pt-12 px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-sm font-medium text-blue uppercase tracking-widest">Our Platforms</span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-3 mb-4 text-text-dark">
             Technology <span className="shimmer-blue">Platforms & Systems</span>

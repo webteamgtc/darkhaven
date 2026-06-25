@@ -16,8 +16,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <WhoWeAre />
+       <PlatformsPreview />
       <WhatWeDo />
-      <PlatformsPreview />
+     
       <WhoWeServe />
       <OurValues />
       <SecurityInfrastructure />

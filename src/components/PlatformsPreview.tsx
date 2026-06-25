@@ -61,7 +61,7 @@ const platforms = [
 
 export default function PlatformsPreview() {
   return (
-    <section className="py-16 sm:py-24 bg-white" id="platforms">
+    <section className="py-10 sm:py-16 bg-gray-100" id="platforms">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -81,7 +81,7 @@ export default function PlatformsPreview() {
             <Link
               key={p.id}
               href={`/platforms#${p.id}`}
-              className="group bg-light rounded-2xl border border-light-2 p-5 sm:p-6 hover:border-blue/25 hover:shadow-xl hover:shadow-blue/8 transition-all duration-300 flex flex-col"
+              className="group bg-white rounded-2xl border border-light-2 p-5 sm:p-6 hover:border-blue/25 hover:shadow-xl hover:shadow-blue/8 transition-all duration-300 flex flex-col"
             >
               {/* Icon + Tag row */}
               <div className="flex items-start justify-between mb-4">
@@ -97,7 +97,7 @@ export default function PlatformsPreview() {
                 {p.title}
               </h3>
               <p className="text-text-dark-3 text-xs sm:text-sm leading-relaxed flex-1">{p.desc}</p>
-              <div className="mt-4 flex items-center gap-1.5 text-blue text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <div className="mt-4 flex items-center gap-1.5 text-black text-xs font-medium opacity-100 hover:text-blue group-hover:opacity-100 transition-opacity duration-200">
                 Explore platform
                 <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -113,7 +113,7 @@ export default function PlatformsPreview() {
             <Link
               key={p.id}
               href={`/platforms#${p.id}`}
-              className="group bg-light rounded-2xl border border-light-2 p-5 sm:p-6 hover:border-blue/25 hover:shadow-xl hover:shadow-blue/8 transition-all duration-300 flex flex-col"
+              className="group bg-white rounded-2xl border border-light-2 p-5 sm:p-6 hover:border-blue/25 hover:shadow-xl hover:shadow-blue/8 transition-all duration-300 flex flex-col"
             >
               {/* Icon + Tag row */}
               <div className="flex items-start justify-between mb-4">
@@ -129,7 +129,7 @@ export default function PlatformsPreview() {
                 {p.title}
               </h3>
               <p className="text-text-dark-3 text-xs sm:text-sm leading-relaxed flex-1">{p.desc}</p>
-              <div className="mt-4 flex items-center gap-1.5 text-blue text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <div className="mt-4 flex items-center gap-1.5 text-black hover:text-blue text-xs font-medium opacity-100 group-hover:opacity-100 transition-opacity duration-200">
                 Explore platform
                 <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
