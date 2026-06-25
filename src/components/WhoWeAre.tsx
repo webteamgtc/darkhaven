@@ -2,13 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const timeline = [
-  { year: "2026", event: "Company Founded" },
-  { year: "2026", event: "Core AI Infrastructure Development" },
-  { year: "2026", event: "Enterprise Software Expansion" },
-  { year: "2026", event: "Global Technology Partnerships" },
-];
-
 const credentials = [
   { label: "Multi-Disciplinary Engineering", detail: "AI + Data + Software + Infrastructure integration" },
   { label: "Secure System Design", detail: "Security-first architecture across all systems" },
@@ -36,7 +29,7 @@ export default function WhoWeAre() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mt-4 mb-4 sm:mb-6 text-text-dark leading-[1.15]"
             >
-              Built on <span className="shimmer-blue">Precision</span>,<br />Driven by Engineering
+              Built for <span className="shimmer-blue">Thoughtful Technology</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -45,56 +38,27 @@ export default function WhoWeAre() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-text-dark-2 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6"
             >
-              Darkhaven is a technology company focused on building intelligent digital
-              infrastructure across AI systems, software engineering, and enterprise backend
-              architecture.
+              Darkhaven is an independent technology company focused on AI applications, software engineering, data systems, and digital infrastructure.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-text-dark-3 text-sm leading-relaxed mb-6 sm:mb-8"
+              className="text-text-dark-3 text-sm leading-relaxed mb-5 sm:mb-6"
             >
-              We design and develop systems that enable organizations to operate with
-              greater efficiency, scalability, and intelligence in a data-driven world.
-              
+              We work with organizations that need clearer systems, stronger technical foundations, and practical solutions for evolving operational needs.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               className="text-text-dark-3 text-sm leading-relaxed mb-6 sm:mb-8"
             >
-            
-              Founded in 2026, we operate with a long-term vision of building resilient
-              digital ecosystems that support modern enterprises.
+              Our approach combines structured planning, engineering discipline, and adaptable technology design.
             </motion.p>
 
-            {/* Timeline */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-3"
-            >
-              {timeline.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 + i * 0.06 }}
-                  className="flex items-center gap-4 group"
-                >
-                  <span className="text-blue font-medium text-sm w-12">{item.year}</span>
-                  <div className="w-6 h-px bg-blue/20 group-hover:bg-blue/40 transition-colors" />
-                  <span className="text-text-dark-2 text-sm">{item.event}</span>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
 
           {/* Credentials */}

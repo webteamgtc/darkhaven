@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 const clients = [
   {
     type: "Enterprise Technology Teams",
-    description: "Supporting internal system modernization and digital transformation for organizations upgrading their technology stack.",
+    description: "Supporting internal teams with system planning, architecture, integration, and technology modernisation initiatives.",
     capabilities: ["System Modernization", "Digital Transformation", "Infrastructure Upgrade"],
   },
   {
     type: "AI-Driven Startups",
-    description: "Building scalable AI and data infrastructure foundations for the next generation of intelligent applications.",
+    description: "Helping early-stage teams shape AI-ready product foundations, data workflows, and scalable technical structures.",
     capabilities: ["AI Infrastructure", "Data Pipelines", "Scalable Architecture"],
   },
   {
     type: "Software-First Companies",
-    description: "Providing backend engineering and system architecture support for companies building software-centric products.",
+    description: "Providing backend engineering, API design, and system architecture support for digital products.",
     capabilities: ["Backend Engineering", "System Architecture", "API Design"],
   },
   {
     type: "Institutional Organizations",
-    description: "Delivering secure, high-performance digital systems for organizations requiring enterprise-grade reliability.",
-    capabilities: ["Enterprise Security", "High Performance", "Compliance Ready"],
+    description: "Supporting structured technology planning for organisations with complex operational and governance requirements.",
+    capabilities: ["Enterprise Security", "High Performance"],
   },
 ];
 
