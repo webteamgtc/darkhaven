@@ -72,7 +72,7 @@ export default function PlatformsPreview() {
           <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             A suite of institutional-grade trading, CRM, and AI systems. Click any platform to explore its full capabilities.
           </p>
-        </div>
+        </div> 
 
         {/* Cards Grid */}
         {/* Row 1 - 4 cards */}
