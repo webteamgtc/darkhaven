@@ -56,12 +56,12 @@ export default function SolutionsPage() {
       <section className="relative pt-20 pb-16 sm:py-24 md:py-32 bg-white overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-          
+            <span className="text-sm font-medium text-blue uppercase tracking-widest">Who We Can Support</span>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4 mb-6 text-text-dark">
-              Solutions for <span className="shimmer-blue">Every Scale</span>
+              Technology Support for <span className="shimmer-blue">Different Team Needs</span>
             </h1>
             <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Darkhaven delivers tailored technology solutions designed to meet the unique demands of each organization type.
+              Darkhaven works with organisations and product teams exploring AI, software, data, and infrastructure initiatives.
             </p>
           </div>
 
