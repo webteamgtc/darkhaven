@@ -88,10 +88,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-blue to-blue-dark flex items-center justify-center shadow-lg shadow-blue/20 flex-shrink-0">
-                <span className="text-white font-bold text-lg sm:text-xl">D</span>
-              </div>
-              <div className="relative w-28 h-8 sm:w-36 sm:h-9 lg:w-36 lg:h-9">
+              <div className="relative w-28 h-8 sm:w-36 sm:h-9">
                 <Image
                   src={isDark ? "/whitelogo.png" : "/darklogo.png"}
                   alt="Darkhaven"
