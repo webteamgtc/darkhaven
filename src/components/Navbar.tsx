@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -87,12 +88,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue to-blue-dark flex items-center justify-center shadow-lg shadow-blue/20">
-                <span className="text-white font-bold text-base">D</span>
+              <div className="relative w-28 h-8 sm:w-32 sm:h-9">
+                <Image
+                  src={isDark ? "/whitelogo.png" : "/darklogo.png"}
+                  alt="Darkhaven"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
               </div>
-              <span className={`text-lg font-semibold transition-colors duration-500 ${isDark ? "text-white" : "text-text-dark"}`}>
-                Dark<span className="shimmer-blue">haven</span>
-              </span>
             </Link>
 
             <div className={`hidden lg:flex items-center gap-1 rounded-full px-1.5 py-1 transition-all duration-500 ${

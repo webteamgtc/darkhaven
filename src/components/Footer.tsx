@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const links = {
   Company: [
     { name: "About Us", href: "/#about" },
@@ -20,10 +22,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand */}
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue to-blue-dark flex items-center justify-center">
-              <span className="text-white font-bold text-sm">D</span>
+            <div className="relative w-28 h-8 sm:w-32 sm:h-9">
+              <Image
+                src="/whitelogo.png"
+                alt="Darkhaven"
+                fill
+                className="object-contain object-left"
+              />
             </div>
-            <span className="text-white font-semibold text-lg">Darkhaven</span>
           </div>
 
           {/* Links */}

@@ -110,7 +110,7 @@ export default function CTABanner() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="bg-light rounded-xl sm:rounded-2xl p-5 sm:p-8 border border-black/[0.04] shadow-lg shadow-blue/5">
-              <h3 className="text-lg sm:text-xl font-semibold text-text-dark mb-5 sm:mb-6">Send Us a Message</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-text-dark mb-5 sm:mb-6">Join Darkhaven</h3>
 
               {status === "success" ? (
                 <div className="flex flex-col items-center justify-center py-10 text-center">
@@ -215,7 +215,7 @@ export default function CTABanner() {
                     className="w-full px-6 py-3 text-sm font-semibold bg-gradient-to-r from-blue-deep via-blue to-blue-light text-white rounded-full hover:shadow-xl hover:shadow-blue/25 transition-all duration-300 relative overflow-hidden group mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     <span className="relative z-10">
-                      {status === "loading" ? "Sending…" : "Send Message"}
+                      {status === "loading" ? "Sending…" : "Get Directions"}
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-shine via-white/20 to-blue-shine -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                   </button>
