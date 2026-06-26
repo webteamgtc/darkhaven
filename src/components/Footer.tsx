@@ -22,7 +22,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand */}
           <div className="flex items-center gap-2.5">
-            <div className="relative w-28 h-8 sm:w-32 sm:h-9">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue to-blue-dark flex items-center justify-center shadow-lg shadow-blue/20 flex-shrink-0">
+              <span className="text-white font-bold text-base">D</span>
+            </div>
+            <div className="relative w-28 h-8 sm:w-36 sm:h-9">
               <Image
                 src="/whitelogo.png"
                 alt="Darkhaven"
