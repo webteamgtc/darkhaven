@@ -463,9 +463,29 @@ export default function PlatformsPage() {
 
       {/* Sticky Layout */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+
+        {/* Mobile Tabs - outside flex, full width */}
+        <div className="lg:hidden w-full mb-8 overflow-x-auto">
+          <div className="flex gap-2 pb-2 min-w-max">
+            {sections.map((s) => (
+              <button
+                key={s.id}
+                onClick={() => scrollToSection(s.id)}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+                  activeSection === s.id
+                    ? "bg-blue text-white shadow-md shadow-blue/20"
+                    : "bg-slate-100 text-text-dark-3 hover:bg-slate-200"
+                }`}
+              >
+                {s.nav}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="flex gap-8 lg:gap-12 relative">
 
-          {/* Sticky Sidebar */}
+          {/* Sticky Sidebar - desktop only */}
           <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
             <div className="sticky top-28 rounded-2xl border border-black/[0.07] bg-white shadow-sm overflow-hidden">
               <div className="px-4 py-3 bg-slate-50 border-b border-black/[0.06]">
@@ -489,25 +509,6 @@ export default function PlatformsPage() {
             </div>
           </aside>
 
-          {/* Mobile Tabs */}
-          <div className="lg:hidden w-full mb-8 -mx-4 px-4 overflow-x-auto">
-            <div className="flex gap-2 pb-2 min-w-max">
-              {sections.map((s) => (
-                <button
-                  key={s.id}
-                  onClick={() => scrollToSection(s.id)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                    activeSection === s.id
-                      ? "bg-blue text-white shadow-md shadow-blue/20"
-                      : "bg-slate-100 text-text-dark-3 hover:bg-slate-200"
-                  }`}
-                >
-                  {s.nav}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Content */}
           <div className="flex-1 min-w-0 space-y-20 sm:space-y-28">
             {sections.map((section) => (
@@ -526,7 +527,7 @@ export default function PlatformsPage() {
                 </div>
 
                 {/* Feature Cards */}
-                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
                   {section.features.map((feat, j) => (
                     <div
                       key={j}
