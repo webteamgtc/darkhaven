@@ -8,7 +8,7 @@ export default function CTABanner() {
     firstName: "",
     lastName: "",
     email: "",
-    interest: "AI & Software Engineering",
+    interest: "AI Applications & Software Engineering",
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -31,7 +31,7 @@ export default function CTABanner() {
       const data = await res.json();
       if (res.ok && data.success) {
         setStatus("success");
-        setForm({ firstName: "", lastName: "", email: "", interest: "AI & Software Engineering", message: "" });
+        setForm({ firstName: "", lastName: "", email: "", interest: "AI Applications & Software Engineering", message: "" });
       } else {
         setStatus("error");
         setErrorMsg(data.error || "Something went wrong. Please try again.");
@@ -100,7 +100,7 @@ export default function CTABanner() {
                 </div>
               </a>
             </div>
-    
+
           </motion.div>
 
           <motion.div
@@ -110,7 +110,7 @@ export default function CTABanner() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="bg-light rounded-xl sm:rounded-2xl p-5 sm:p-8 border border-black/[0.04] shadow-lg shadow-blue/5">
-              <h3 className="text-lg sm:text-xl font-semibold text-text-dark mb-5 sm:mb-6">Join Darkhaven</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-text-dark mb-5 sm:mb-6">Tell Us About Your Project</h3>
 
               {status === "success" ? (
                 <div className="flex flex-col items-center justify-center py-10 text-center">
@@ -183,11 +183,24 @@ export default function CTABanner() {
                       onChange={handleChange}
                       className="w-full px-4 py-2.5 bg-white rounded-xl border border-black/[0.06] text-text-dark text-sm focus:border-blue/40 focus:ring-2 focus:ring-blue/10 outline-none transition-all"
                     >
-                      <option>AI & Software Engineering</option>
-                      <option>Data Infrastructure</option>
-                      <option>Digital Integration</option>
-                      <option>Enterprise Consulting</option>
-                      <option>General Inquiry</option>
+                      <optgroup label="Core Technology Capabilities">
+                        <option>AI Applications & Software Engineering</option>
+                        <option>Data Systems & Integration</option>
+                        <option>Infrastructure & Backend Architecture</option>
+                      </optgroup>
+                      <optgroup label="Technology Solutions">
+                        <option>White-Label Market Infrastructure</option>
+                        <option>MT4/MT5-Connected CRM Software</option>
+                        <option>Cross-Environment Workflow Software</option>
+                        <option>AI Research & Analytical Infrastructure</option>
+                        <option>Quantitative Research & Workflow Infrastructure</option>
+                        <option>AI-Enabled Workflow & Analytics Infrastructure</option>
+                        <option>AI Customer Service & Workflow Software</option>
+                      </optgroup>
+                      <optgroup label="Other">
+                        <option>Technology Planning & Implementation</option>
+                        <option>General Business Inquiry</option>
+                      </optgroup>
                     </select>
                   </div>
                   <div>
@@ -215,12 +228,12 @@ export default function CTABanner() {
                     className="w-full px-6 py-3 text-sm font-semibold bg-gradient-to-r from-blue-deep via-blue to-blue-light text-white rounded-full hover:shadow-xl hover:shadow-blue/25 transition-all duration-300 relative overflow-hidden group mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     <span className="relative z-10">
-                      {status === "loading" ? "Sending…" : "Get Directions"}
+                      {status === "loading" ? "Sending…" : "Send Inquiry"}
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-shine via-white/20 to-blue-shine -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                   </button>
                   <p className="text-[11px] text-text-dark-3/60 text-center mt-3">
-                    By submitting, you agree to our Privacy Policy. We&apos;ll never share your data.
+                    By submitting this form, you acknowledge that Darkhaven will process your information in accordance with its Privacy Policy.
                   </p>
                 </form>
               )}
