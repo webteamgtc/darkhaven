@@ -9,13 +9,13 @@ export const metadata = {
 const capabilities = [
   {
     title: "Data Systems & Integration",
-    description: "We help organisations structure operational data, map information workflows, and plan integrations between essential systems.",
+    description: "We help organizations structure operational data, map information workflows, and plan integrations between essential systems.",
     items: [
       "Data structure and workflow mapping",
       "Data pipeline planning",
       "API and system integration design",
       "Reporting and dashboard foundations",
-      "Data access and governance considerations",
+      "Technical Data Access & Governance Considerations",
     ],
   },
   {
@@ -55,7 +55,7 @@ export default function CapabilitiesPage() {
               Technology Services &amp; <span className="shimmer-blue">Capabilities</span>
             </h1>
             <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Darkhaven supports organisations with technology planning, software development, data systems, and digital infrastructure projects.
+              Darkhaven supports organizations with technology planning, software development, data systems, and digital infrastructure projects.
             </p>
           </div>
 

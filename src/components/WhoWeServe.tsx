@@ -20,7 +20,7 @@ const clients = [
   },
   {
     type: "Institutional Organizations",
-    description: "Supporting structured technology planning for organisations with complex operational and governance requirements.",
+    description: "Supporting structured technology planning for organizations with complex operational and governance requirements.",
     capabilities: ["Enterprise Security", "High Performance"],
   },
 ];

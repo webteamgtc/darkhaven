@@ -38,9 +38,9 @@ const solutions = [
     ],
   },
   {
-    label: "STRUCTURED ORGANISATIONS",
-    title: "For Organisations with Complex Requirements",
-    description: "Supporting organisations that require clearer technical planning, structured workflows, and considered system design.",
+    label: "COMPLEX ORGANIZATIONS",
+    title: "For organizations with Complex Requirements",
+    description: "Supporting organizations that require clearer technical planning, structured workflows, and considered system design.",
     features: [
       { name: "Security Considerations", detail: "Considering access, permissions, and data handling during system planning" },
       { name: "Reliability Planning", detail: "Including maintainability, recovery, and continuity considerations in project design" },
@@ -61,7 +61,7 @@ export default function SolutionsPage() {
               Technology Support for <span className="shimmer-blue">Different Team Needs</span>
             </h1>
             <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Darkhaven works with organisations and product teams exploring AI, software, data, and infrastructure initiatives.
+              Darkhaven works with organizations and product teams exploring AI, software, data, and infrastructure initiatives.
             </p>
           </div>
 

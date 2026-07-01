@@ -136,8 +136,8 @@ export default function WhoWeAre() {
                 <div>
                   <div className="text-xs uppercase tracking-widest text-gold-dark font-semibold mb-2">Our Vision</div>
                   <p className="text-text-dark-2 text-sm leading-relaxed">
-                    To be the world&apos;s most trusted technology infrastructure provider,
-                    setting the standard for AI systems, data engineering, and operational resilience.
+                     To be a trusted technology infrastructure partner, supporting practical AI systems, data engineering, and operational resilience.
+
                   </p>
                 </div>
               </div>

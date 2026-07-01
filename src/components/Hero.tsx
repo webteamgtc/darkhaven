@@ -360,7 +360,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-base sm:text-lg md:text-lg text-text-light-2 max-w-3xl mx-auto mb-5 leading-relaxed font-light"
         >
-          Darkhaven designs AI-enabled software, data systems, and digital infrastructure for organisations building their next stage of growth.
+          Darkhaven designs AI-enabled software, data systems, and digital infrastructure for organizations building their next stage of growth.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

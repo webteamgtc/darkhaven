@@ -4,58 +4,58 @@ const platforms = [
   {
     id: "trading-system",
     icon: "⚡",
-    label: "Trading System",
-    title: "Darkhaven Trading System",
-    desc: "Institutional-grade forex & crypto trading platform with advanced execution, liquidity aggregation, and white-label support.",
-    tag: "Forex · Crypto",
+    tag: "MARKET TECHNOLOGY",
+    label: "WHITE-LABEL SOFTWARE",
+    title: "White-Label Market Infrastructure",
+    desc: "Configurable software infrastructure for client-managed market-service environments, including workflow tools, selected integrations and operational administration features.",
   },
   {
     id: "crm-system",
     icon: "👤",
-    label: "CRM System",
-    title: "MT4/MT5 CRM System",
-    desc: "Comprehensive CRM built for forex brokers — manage customers, automate marketing, and run multi-level commission rebates.",
-    tag: "Broker Tools",
+    tag: "CLIENT OPERATIONS",
+    label: "CRM SOFTWARE",
+    title: "MT4/MT5-Connected CRM Software",
+    desc: "Configurable CRM and workflow software that helps client teams organize records, communications, permissions and selected third-party system connections.",
   },
   {
     id: "copy-community",
     icon: "🔗",
-    label: "Copy Trading",
-    title: "Cross Platform Follow-Up Community",
-    desc: "Cross-platform copy trading between MT4 & MT5 with millisecond latency, mobile cloud operation, and private deployment.",
-    tag: "MT4 · MT5",
+    tag: "WORKFLOW TOOLS",
+    label: "SYNCHRONIZATION SOFTWARE",
+    title: "Cross-Environment Workflow Software",
+    desc: "Client-deployed workflow synchronization tools for compatible third-party environments, with configurable permissions, administrative controls and deployment settings.",
   },
   {
     id: "ai-stock-selection",
     icon: "🤖",
-    label: "AI Stock Selection",
-    title: "Darkhaven AI Quant Stock Selection",
-    desc: "Global AI-powered quantitative stock selection combining hundreds of factors, machine learning, and real-time portfolio monitoring.",
-    tag: "AI · Quant",
+    tag: "AI · ANALYTICS",
+    label: "RESEARCH INFRASTRUCTURE",
+    title: "AI Research & Analytical Infrastructure",
+    desc: "Configurable AI and data-processing tooling that supports client-authorized research workflows, analytical inputs, model testing and governance processes.",
   },
   {
     id: "futures-arbitrage",
     icon: "📉",
-    label: "Hedge Arbitrage",
-    title: "Darkhaven Futures Hedge Arbitrage System",
-    desc: "Quantitative hedge arbitrage for futures markets — automated trading, extreme value recognition, and strict risk controls.",
-    tag: "Futures · Quant",
+    tag: "DATA · MODELS",
+    label: "QUANTITATIVE WORKFLOWS",
+    title: "Quantitative Research & Workflow Infrastructure",
+    desc: "Client-configured software for structured data processing, model documentation, review workflows and operational controls within independently managed environments.",
   },
   {
     id: "forex-ea",
     icon: "🧠",
-    label: "Forex EA",
-    title: "Darkhaven Forex EA Asset Management",
-    desc: "AI-driven autonomous forex trading with deep learning, multi-strategy execution, and 24/5 all-weather cloud deployment.",
-    tag: "Forex · AI",
+    tag: "AI · AUTOMATION",
+    label: "WORKFLOW SOFTWARE",
+    title: "AI-Enabled Workflow & Analytics Infrastructure",
+    desc: "Modular tools that support client-defined data processing, model configuration, scheduled workflows and technical administration across approved environments.",
   },
   {
     id: "ai-customer-service",
     icon: "💬",
-    label: "AI Support",
-    title: "Darkhaven AI Customer Service System",
-    desc: "GPT-powered autonomous customer service handling 10,000+ inquiries per minute — 24/7, multi-channel, and low-cost.",
-    tag: "GPT · Automation",
+    tag: "AI · SUPPORT",
+    label: "CUSTOMER SERVICE SOFTWARE",
+    title: "AI Customer Service & Workflow Software",
+    desc: "Configurable AI-powered software for inquiry management, response workflows, escalation routing and client-controlled service administration.",
   },
 ];
 
@@ -65,14 +65,14 @@ export default function PlatformsPreview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <span className="text-sm font-medium text-blue uppercase tracking-widest">Our Platforms</span>
+          <span className="text-sm font-medium text-blue uppercase tracking-widest">Our Technology</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mt-4 mb-5 text-text-dark">
-            Technology <span className="shimmer-blue">Platforms & Systems</span>
+            Client-Deployed <span className="shimmer-blue">Technology Systems</span>
           </h2>
-          <p className="text-text-dark-3 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            A suite of institutional-grade trading, CRM, and AI systems. Click any platform to explore its full capabilities.
+          <p className="text-text-dark-3 text-base sm:text-lg mx-auto leading-relaxed">
+            Darkhaven builds configurable white-label software, CRM, AI and data infrastructure for independent business clients. Each solution is delivered for client deployment and administration within the client&apos;s own operating environment. Darkhaven provides technology and implementation support only.
           </p>
-        </div> 
+        </div>
 
         {/* Cards Grid */}
         {/* Row 1 - 4 cards */}
@@ -88,9 +88,7 @@ export default function PlatformsPreview() {
                 <div className="w-11 h-11 rounded-xl bg-blue/[0.08] border border-blue/15 flex items-center justify-center text-xl group-hover:bg-blue/[0.14] transition-colors flex-shrink-0">
                   {p.icon}
                 </div>
-                <span className="text-[10px] font-semibold text-blue bg-blue/[0.07] border border-blue/15 px-2 py-1 rounded-full whitespace-nowrap">
-                  {p.tag}
-                </span>
+              
               </div>
               <p className="text-[11px] font-semibold text-blue uppercase tracking-widest mb-1">{p.label}</p>
               <h3 className="text-sm sm:text-[15px] font-semibold text-text-dark mb-2 leading-snug group-hover:text-blue transition-colors">
@@ -98,7 +96,7 @@ export default function PlatformsPreview() {
               </h3>
               <p className="text-text-dark-3 text-xs sm:text-sm leading-relaxed flex-1">{p.desc}</p>
               <div className="mt-4 flex items-center gap-1.5 text-black text-xs font-medium opacity-100 hover:text-blue group-hover:opacity-100 transition-opacity duration-200">
-                Explore platform
+                Explore solution
                 <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -120,9 +118,7 @@ export default function PlatformsPreview() {
                 <div className="w-11 h-11 rounded-xl bg-blue/[0.08] border border-blue/15 flex items-center justify-center text-xl group-hover:bg-blue/[0.14] transition-colors flex-shrink-0">
                   {p.icon}
                 </div>
-                <span className="text-[10px] font-semibold text-blue bg-blue/[0.07] border border-blue/15 px-2 py-1 rounded-full whitespace-nowrap">
-                  {p.tag}
-                </span>
+               
               </div>
               <p className="text-[11px] font-semibold text-blue uppercase tracking-widest mb-1">{p.label}</p>
               <h3 className="text-sm sm:text-[15px] font-semibold text-text-dark mb-2 leading-snug group-hover:text-blue transition-colors">
@@ -130,7 +126,7 @@ export default function PlatformsPreview() {
               </h3>
               <p className="text-text-dark-3 text-xs sm:text-sm leading-relaxed flex-1">{p.desc}</p>
               <div className="mt-4 flex items-center gap-1.5 text-black hover:text-blue text-xs font-medium opacity-100 group-hover:opacity-100 transition-opacity duration-200">
-                Explore platform
+                Explore solution
                 <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>

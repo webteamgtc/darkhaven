@@ -7,404 +7,406 @@ import Footer from "@/components/Footer";
 // ─── Data ──────────────────────────────────────────────────────────────────
 
 const sections = [
-  {
+    {
     id: "trading-system",
-    nav: "Darkhaven Trading System",
-    title: "Darkhaven Trading System",
-    subtitle: "Forex and Digital Currency Trading System",
+    nav: "White-Label Market Infrastructure",
+    title: "White-Label Market Technology Infrastructure",
     description:
-      "Darkhaven is an institutional level forex and cryptocurrency trading system designed to provide comprehensive solutions for brokers and exchanges to meet the needs of their traders. Its powerful features and reliable performance make it one of the leading trading platforms in the industry.",
+      "Darkhaven builds configurable, white-label software infrastructure for institutional and market-service clients. Our technology can support client-managed workflows across foreign exchange, derivatives and digital-asset-related environments, with each client responsible for its own operational, regulatory and commercial framework.",
     features: [
       {
         icon: "⚡",
-        title: "Advanced Transaction Execution Engine",
-        desc: "Provide extremely low microsecond level latency and high throughput to ensure fast and accurate transaction execution.",
+        title: "High-Performance System Architecture",
+        desc: "Engineered for efficient data processing, workflow handling and resilient technical performance within client-managed environments.",
       },
       {
         icon: "💧",
-        title: "Deep Liquidity Aggregation",
-        desc: "Connect to multiple liquidity providers to provide traders with optimal execution prices and deep liquidity.",
+        title: "Liquidity Connectivity Framework",
+        desc: "Configurable technology connectors enable clients to integrate selected liquidity sources, pricing feeds and internal systems within their own operating environment.",
       },
       {
         icon: "📊",
-        title: "Multi Asset Support",
-        desc: "Support a wide range of foreign exchange currency pairs, precious metals, stocks, and digital currencies to meet the needs of different traders.",
+        title: "Configurable Multi-Asset Setup",
+        desc: "Clients can configure supported instrument categories, data environments and workflows to align with their own business, technical and regulatory requirements.",
       },
       {
         icon: "📋",
-        title: "Flexible Order Management",
-        desc: "Provide various order types, including market orders, limit orders, stop loss orders, and take profit orders, to provide traders with comprehensive order control.",
+        title: "Configurable Workflow Controls",
+        desc: "Tools that enable clients to configure routing logic, permissions, workflow parameters and operational processes within their own deployment.",
       },
       {
         icon: "🛡️",
-        title: "Risk Management Tools",
-        desc: "A comprehensive risk management tool that includes stop loss, take profit, and margin levels to help traders manage risk and protect capital.",
+        title: "Operational Risk-Control Tooling",
+        desc: "Configurable monitoring, rule-management and reporting capabilities support client-defined operational controls. Clients remain responsible for their own risk policies and decisions.",
       },
       {
         icon: "🎨",
-        title: "Customized Brand",
-        desc: "Allow brokers and exchanges to customize platforms to match their brand identity and provide a seamless user experience.",
+        title: "Brand & Interface Configuration",
+        desc: "White-label interface, identity and experience settings help clients present the technology under their own brand and operating model.",
       },
       {
         icon: "🏛️",
-        title: "Institutional Level Reliability",
-        desc: "Adopting the most advanced technology and infrastructure to ensure the stability and reliability of the platform, it can operate normally even in high volatility markets.",
+        title: "Resilient Technical Architecture",
+        desc: "Modular infrastructure designed to support continuity, observability and operational stability across client deployments.",
       },
       {
         icon: "📈",
-        title: "Scalability And Flexibility",
-        desc: "Highly scalable, capable of handling large trading volumes, and customizable according to the specific needs of brokers and exchanges.",
+        title: "Modular Scalability",
+        desc: "Flexible components can be configured to support evolving workflow volumes, user requirements and technical integrations.",
       },
       {
         icon: "🏷️",
-        title: "White Label Solution",
-        desc: "Provide white label solutions to enable brokers and exchanges to quickly and easily launch their own trading platforms.",
+        title: "White-Label Deployment",
+        desc: "Darkhaven delivers configurable, client-deployed technology that can be integrated into a client's own branded environment and operated independently by that client.",
       },
       {
         icon: "🕐",
-        title: "24/7 Support",
-        desc: "Provide 24/7 support to ensure brokers and exchanges receive the necessary assistance and support.",
+        title: "Technical Support",
+        desc: "Technical support is available for authorized client teams in accordance with the applicable service and support arrangements.",
       },
     ],
+    footer:
+      "Darkhaven provides technology and technical support only. Clients remain responsible for their own regulatory obligations, customer communications, data governance, commercial arrangements and operational decisions.",
   },
-  {
+    {
     id: "crm-system",
-    nav: "MT4/MT5 CRM System",
-    title: "MT4/MT5 CRM System",
-    subtitle: "Customer Relationship Management for Forex Brokers",
+    nav: "Client-Configured CRM & Workflow Infrastructure",
+    title: "Client-Configured CRM & Workflow Infrastructure",
     description:
-      "The MT4/MT5 CRM system is a comprehensive customer relationship management (CRM) system designed specifically for forex and digital currency brokers. It seamlessly integrates with popular MT4 and MT5 trading platforms, providing brokers with a powerful set of tools to manage and expand their customer base, and generates revenue through multi-level flexible commission settings and built-in investment and fund subscription models.",
+      "Darkhaven builds configurable CRM and workflow software for institutional clients operating approved third-party environments, including MT4 and MT5-connected workflows where permitted. The system helps authorized client teams organize customer records, configure operational processes, manage communications and connect selected third-party systems within their own independently operated environment.",
     features: [
       {
         icon: "👤",
-        title: "Customer Management",
-        desc: "Centralize the management of customer data, including personal information, transaction history, and interaction records.",
+        title: "Customer Record Management",
+        desc: "Centralize client-provided records, interaction histories and operational notes within a configurable client-managed environment.",
       },
       {
         icon: "🎯",
-        title: "Lead Management",
-        desc: "Track and manage potential customers, and convert them into paying customers through automated processes.",
+        title: "Lead Workflow Management",
+        desc: "Configure lead-routing stages, task assignments and follow-up workflows for authorized client teams.",
       },
       {
         icon: "📣",
-        title: "Marketing Automation",
-        desc: "Create and send personalized email and SMS campaigns to attract and retain customers.",
+        title: "Communication Automation",
+        desc: "Create configurable email and SMS communication workflows, subject to each client's own consent, privacy and communication requirements.",
       },
       {
         icon: "💎",
-        title: "Multi Level Commission Rebate",
-        desc: "Set up a flexible multi-level rebate structure to incentivize existing customers to recommend new customers.",
+        title: "Referral & Partner Configuration",
+        desc: "Support configurable referral, partner and commission-recording workflows based on client-defined commercial arrangements.",
       },
       {
         icon: "💰",
-        title: "Fund Purchase",
-        desc: "Cooperate with third-party fund companies to provide customers with fund subscription services and expand their sources of income.",
+        title: "Third-Party Service Workflows",
+        desc: "Enable clients to configure workflows for selected third-party services or integrations within their own operational environment.",
       },
       {
         icon: "📉",
-        title: "Improve Customer Acquisition And Retention Rates",
-        desc: "Through multi-level rebates and personalized marketing activities, securities firms can effectively improve customer acquisition and retention rates.",
+        title: "Engagement Workflow Insights",
+        desc: "Provide configurable reporting views that help client teams review workflow activity, communication status and operational engagement metrics.",
       },
       {
         icon: "💹",
-        title: "Increase Sources Of Income",
-        desc: "The built-in wealth management and fund subscription functions provide securities firms with additional sources of income and improve profitability.",
+        title: "Configurable Service Modules",
+        desc: "Modular CRM components can be configured around a client's selected service workflows, permissions and internal processes.",
       },
       {
         icon: "⚙️",
-        title: "Optimize Sales Process",
-        desc: "Through automation and performance tracking, securities firms can optimize their sales processes and improve efficiency.",
+        title: "Operational Process Configuration",
+        desc: "Automation and configurable task-management tools support structured internal workflows and team coordination.",
       },
       {
         icon: "🤝",
-        title: "Enhance Customer Relationships",
-        desc: "A deep understanding of customer interactions and preferences enables securities firms to establish stronger customer relationships and improve customer satisfaction.",
+        title: "Customer Interaction Management",
+        desc: "Authorized client teams can organize customer interactions, preferences and service records in accordance with their own data-governance framework.",
       },
     ],
+    footer:
+      "Darkhaven provides technology and technical support only. Clients remain responsible for their own regulatory obligations, customer communications, data governance, commercial arrangements and operational decisions.",
   },
-  {
+    {
     id: "copy-community",
-    nav: "Cross Platform Follow-up Community",
-    title: "Cross Platform Follow-Up Community",
-    subtitle: "Cross-Platform Copy Trading Platform",
+    nav: "Client-Deployed Workflow Synchronization Software",
+    title: "Client-Deployed Workflow Synchronization Software",
     description:
-      "The cross platform copy following community is an innovative platform that allows traders to copy each other across platforms between MT4 and MT5 trading platforms. It provides extremely low millisecond latency and pure mobile cloud operation, without hanging up, making it easy to use.",
+      "Darkhaven builds configurable, client-deployed workflow synchronization software for qualified institutional clients. The software can connect with compatible third-party environments to support client-defined permissions, workflow configurations and technical administration. Each client independently operates its own environment and remains responsible for all customer-facing, regulatory, commercial and operational activities.",
     features: [
       {
         icon: "🔗",
-        title: "Cross Platform Follow-Up",
-        desc: "Allowing traders to copy each other between MT4 and MT5 platforms breaks platform restrictions.",
+        title: "Cross-Environment Configuration",
+        desc: "Support client-defined configurations across compatible third-party environments, subject to available integrations and applicable requirements.",
       },
       {
         icon: "⚡",
-        title: "Extremely Low Latency",
-        desc: "Adopting advanced technology to achieve millisecond level ultra-low latency, ensuring timely execution of follow-up signals.",
+        title: "Performance-Oriented Architecture",
+        desc: "Designed to support efficient data exchange and workflow synchronization across client-managed environments. Actual performance depends on deployment, connectivity and third-party systems.",
+      },
+      {
+        icon: "📱",
+        title: "Browser & Mobile Access",
+        desc: "Browser-based administrative access helps authorized client teams review and manage configured workflows across approved devices.",
       },
       {
         icon: "☁️",
-        title: "Pure Mobile Cloud Operation",
-        desc: "No need to install any software on the local computer, just use your phone to order anytime, anywhere.",
-      },
-      {
-        icon: "🚫",
-        title: "No Need To Hang Up",
-        desc: "Using cloud servers for operation, traders do not need to hang up their local computers, freeing up their devices.",
+        title: "Cloud Deployment Options",
+        desc: "Flexible deployment options can be configured according to a client's selected cloud environment, technical requirements and data-governance framework.",
       },
       {
         icon: "🔒",
-        title: "Private Domain Deployment",
-        desc: "Provide brokers with private domain deployment options to protect customer data security and customize platform features.",
+        title: "Private Deployment Configuration",
+        desc: "Support client-controlled domains, permissions and environment settings under the applicable deployment arrangement.",
       },
       {
         icon: "👥",
-        title: "Broker Customer Retention",
-        desc: "Brokers can attract and retain customers, increase trading volume and commission income by providing copy tracking services.",
+        title: "Role-Based Administration",
+        desc: "Configure access roles, permissions and operational controls for authorized client teams.",
+      },
+      {
+        icon: "📋",
+        title: "Client-Defined Workflow Rules",
+        desc: "Clients can configure internal workflow rules, review processes and authorization settings within their independently operated environment.",
       },
       {
         icon: "📊",
-        title: "Trader Profit Opportunities",
-        desc: "Traders can follow experienced traders to copy their trading strategies and increase profit opportunities.",
+        title: "Activity Logs & Reporting",
+        desc: "Configurable logs and reporting views help client teams review system activity, workflow status and technical events.",
       },
       {
-        icon: "🏠",
-        title: "Convenient Trading For Retail Investors",
-        desc: "Retail investors can easily participate in forex and digital currency trading through the follow-up community without the need for professional knowledge.",
+        icon: "🔌",
+        title: "Integration Management",
+        desc: "Support the administration of selected compatible third-party integrations within a client-managed technical environment.",
       },
       {
-        icon: "✅",
-        title: "Easy To Use",
-        desc: "Pure mobile cloud operation and extremely low latency, easy to use, and capable of tracking orders anytime, anywhere.",
-      },
-      {
-        icon: "🛡️",
-        title: "Safe And Reliable",
-        desc: "Adopting advanced technology and private domain deployment options to ensure transaction security and data privacy.",
+        icon: "🕐",
+        title: "Technical Support",
+        desc: "Darkhaven provides technical implementation and support services to authorized client teams under the applicable service arrangement.",
       },
     ],
-    footer:
-      "Cross platform copy following community is an indispensable tool for forex and digital currency traders. It breaks through platform limitations, provides extremely low latency and convenient tracking experience, helping brokers, traders, and retail investors achieve their trading goals.",
   },
-  {
+    {
     id: "ai-stock-selection",
-    nav: "Darkhaven AI Quant Stock Selection",
-    title: "Darkhaven AI Multi Factor Investment Model Stock Selection System",
-    subtitle: "AI-Powered Quantitative Stock Selection",
+    nav: "AI Research & Analytical Infrastructure",
+    title: "AI Research & Analytical Infrastructure",
     description:
-      "Darkhaven TechQuant is an innovative global AI multi factor investment model stock selection system designed to meet investors' demand for quantitative automatic stock selection in the global securities market. It integrates cutting-edge AI models and machine learning technologies, providing investors with unprecedented investment experience and protection.",
+      "Darkhaven builds configurable AI research and analytical software infrastructure for business clients. The framework supports client-authorized data connections, configurable analysis workflows and controlled model environments within each client's independently operated technical infrastructure. Clients determine their own data sources, access permissions, workflow settings, review procedures and permitted use cases. Darkhaven provides software and technical support only.",
     features: [
       {
-        icon: "🌏",
-        title: "Global Securities Market Coverage",
-        desc: "Covering major global securities markets, including stocks, bonds, commodities, and foreign exchange.",
+        icon: "🔌",
+        title: "Client-Authorized Data Connectivity",
+        desc: "Support configurable connections to selected third-party data sources authorized by the client. Availability depends on the client's own agreements, permissions and technical environment.",
       },
       {
         icon: "🤖",
-        title: "AI Big Models And Machine Learning",
-        desc: "Using advanced AI models and machine learning algorithms to analyze massive amounts of data and identify potential investment opportunities.",
+        title: "AI & Machine Learning Tooling",
+        desc: "Configurable AI and machine-learning tools support data processing, pattern analysis and model experimentation within a client-managed environment.",
       },
       {
         icon: "📐",
-        title: "Multifactorial Model",
-        desc: "Combining hundreds of quantitative factors, including financial indicators, market sentiment, and technical indicators, provides comprehensive insights for stock selection.",
-      },
-      {
-        icon: "🔍",
-        title: "Automatic Stock Selection",
-        desc: "The system automatically screens and evaluates stocks, generating selected stock portfolios based on pre-defined investment strategies and risk preferences.",
-      },
-      {
-        icon: "📡",
-        title: "Real Time Monitoring And Adjustment",
-        desc: "The system continuously monitors market dynamics and adjusts investment portfolios as needed to optimize returns and manage risks.",
-      },
-      {
-        icon: "👥",
-        title: "Broker Customer Retention",
-        desc: "Brokers can attract and retain customers, increase trading volume and commission income by providing copy tracking services.",
-      },
-      {
-        icon: "💡",
-        title: "Enhance Investment Decision-Making",
-        desc: "By providing data-driven insights and recommendations, help investors make informed investment decisions.",
-      },
-      {
-        icon: "⏳",
-        title: "Save Time And Effort",
-        desc: "Automated stock selection process saves investors a lot of time and energy, allowing them to focus on other important tasks.",
-      },
-      {
-        icon: "📈",
-        title: "Improve Investment Returns",
-        desc: "Verified multi factor models and AI technology can help identify stocks with high growth potential and low risk, improving investment returns.",
-      },
-      {
-        icon: "📉",
-        title: "Reduce Investment Risk",
-        desc: "Reduce the overall risk of the investment portfolio through diversified investment portfolio and dynamic risk management.",
-      },
-      {
-        icon: "🎭",
-        title: "Suitable For Various Investors",
-        desc: "Whether experienced professionals or beginners, Darkhaven can meet different investment needs and risk tolerance.",
-      },
-    ],
-  },
-  {
-    id: "futures-arbitrage",
-    nav: "Darkhaven Futures Hedge Arbitrage",
-    title: "Darkhaven Futures Quantitative Hedge Arbitrage Trading System",
-    subtitle: "Quantitative Hedge Arbitrage for Futures Markets",
-    description:
-      "Hedging arbitrage is a trading strategy that reduces risk and profits by simultaneously buying and selling related futures contracts. The Darkhaven system uses quantitative models to analyze historical data, identify extreme points of futures contract spreads, and profit from the regression or convergence of spreads. Darkhaven Futures Quantitative Hedge Arbitrage Trading System is an innovative trading system designed specifically for quantitative hedge arbitrage trading in the futures market. It combines cutting-edge quantitative technology and advanced arbitrage strategies, providing investors with stable profits and minimal risk investment opportunities.",
-    features: [
-      {
-        icon: "📉",
-        title: "Historical Extreme Value Recognition",
-        desc: "The system adopts advanced statistical models and machine learning algorithms to identify the extreme points of futures contract spreads.",
-      },
-      {
-        icon: "🔄",
-        title: "Cross Period And Cross Variety Arbitrage",
-        desc: "The system is not limited to cross period arbitrage of the same contract, but also supports arbitrage across different varieties, expanding profit opportunities.",
-      },
-      {
-        icon: "🧬",
-        title: "Multi Factor Quantification Model",
-        desc: "The system adopts a multi factor quantification model to model and predict price differences, improving the accuracy of trading.",
-      },
-      {
-        icon: "🤖",
-        title: "Automated Trading",
-        desc: "The system implements automated trading, and once an arbitrage opportunity is identified, it will automatically execute trading instructions.",
-      },
-      {
-        icon: "⚠️",
-        title: "Strict Risk Control Mechanism",
-        desc: "Strict risk control mechanisms are built into the system, including position management, stop loss, and take profit strategies, to minimize risks to the greatest extent possible.",
-      },
-      {
-        icon: "💰",
-        title: "Stable Profitability",
-        desc: "Hedging arbitrage strategies profit by utilizing the regression or convergence of price differences, resulting in relatively stable profits.",
-      },
-      {
-        icon: "🎯",
-        title: "Minimum Risk",
-        desc: "Simultaneously buying and selling relevant contracts effectively reduces market risk and unilateral risk.",
-      },
-      {
-        icon: "🏆",
-        title: "High Winning Rate",
-        desc: "Quantitative models and historical extreme value recognition have improved the winning rate of trades and reduced the likelihood of losses.",
-      },
-      {
-        icon: "⚙️",
-        title: "Automation",
-        desc: "Automated trading by the system saves traders' time and energy, avoiding human errors.",
-      },
-      {
-        icon: "🌐",
-        title: "Suitable For Various Markets",
-        desc: "Hedge arbitrage strategies are applicable in both volatile and stable market environments.",
-      },
-    ],
-  },
-  {
-    id: "forex-ea",
-    nav: "Darkhaven Forex EA Asset Management",
-    title: "Darkhaven Forex EA Quantitative Asset Management System",
-    subtitle: "AI-Powered Autonomous Forex Trading",
-    description:
-      "Darkhaven Forex EA Quantitative Asset Management System is a powerful trading system designed specifically for quantitative trading in the forex market. It combines artificial intelligence (AI) technology, deep learning, and autonomous trading, providing investors with stable profit and risk avoidance investment opportunities. The Darkhaven system utilizes advanced AI algorithms and deep learning models to analyze historical data and real-time market dynamics, and identify trading opportunities. It utilizes autonomous trading function to automatically execute trading instructions without the need for manual intervention.",
-    features: [
-      {
-        icon: "🧠",
-        title: "AI Algorithms And Deep Learning",
-        desc: "The system adopts cutting-edge AI algorithms and deep learning models to learn market patterns and trends from massive amounts of data.",
-      },
-      {
-        icon: "🤖",
-        title: "Autonomous Trading",
-        desc: "The system implements autonomous trading, and once a trading opportunity is identified, it will automatically execute trading instructions, freeing up traders' hands.",
+        title: "Configurable Analytical Inputs",
+        desc: "Clients can define, document and review analytical inputs, parameters and calculation logic according to their own internal requirements.",
       },
       {
         icon: "🗂️",
-        title: "Multi Strategy Trading",
-        desc: "The system supports multiple trading strategies, including trend tracking, reversal trading, and arbitrage trading, to adapt to different market conditions.",
+        title: "Research Workflow Configuration",
+        desc: "Configure internal research stages, review procedures and authorization workflows for designated client teams.",
       },
       {
-        icon: "🛡️",
-        title: "Strict Risk Control Mechanism",
-        desc: "The system is equipped with strict risk control mechanisms, including position management, stop loss, and take profit strategies, to minimize risks to the greatest extent possible.",
+        icon: "📡",
+        title: "Data Monitoring & Version Control",
+        desc: "Maintain visibility over data updates, configuration changes and model versions through client-defined logs and review records.",
       },
       {
-        icon: "☁️",
-        title: "Cloud Deployment",
-        desc: "The system is deployed on cloud servers to ensure the stability and security of transactions.",
+        icon: "👥",
+        title: "Role-Based Administration",
+        desc: "Configure user roles, approval flows and access permissions within the client's independently administered environment.",
       },
       {
-        icon: "💎",
-        title: "Stable Profitability",
-        desc: "AI algorithms and deep learning models have improved the accuracy of trading, providing investors with stable profit opportunities.",
-      },
-      {
-        icon: "🔐",
-        title: "Risk-Aversion",
-        desc: "Strict risk control mechanisms and autonomous trading functions help investors avoid market risks and protect fund security.",
+        icon: "📋",
+        title: "Internal Review Workspace",
+        desc: "Organize analytical materials, documentation and internal review records for authorized client teams.",
       },
       {
         icon: "⏳",
-        title: "Save Time And Effort",
-        desc: "Quantitative models and historical extreme value recognition have improved the winning rate of trades and reduced the likelihood of losses.",
+        title: "Scheduled Processing",
+        desc: "Support repeatable data-processing tasks and scheduled workflows based on client-configured parameters.",
       },
       {
-        icon: "🕐",
-        title: "24 * 5 All-Weather Trading",
-        desc: "The system operates 24/7, seizes every profit opportunity, and achieves maximum profit.",
-      },
-    ],
-  },
-  {
-    id: "ai-customer-service",
-    nav: "Darkhaven AI Customer Service System",
-    title: "Darkhaven AI Customer Service System",
-    subtitle: "Autonomous GPT-Powered Customer Support",
-    description:
-      "The Darkhaven AI Customer Service System is an autonomous AI customer service system trained using GPT, designed to provide businesses with a 24/7, efficient, and low-cost customer service solution. The Darkhaven system leverages a pre-trained GPT model, utilizing natural language processing and machine learning technologies to understand various customer inquiries and generate accurate, comprehensive responses. It can autonomously handle customer inquiries in private domains, achieving automated sales and customer service.",
-    features: [
-      {
-        icon: "🤖",
-        title: "Autonomous Model Trained with GPT",
-        desc: "The system uses advanced GPT models, which have strong language understanding and generation capabilities, enabling it to handle complex and diverse customer questions.",
+        icon: "🔗",
+        title: "Integration Management",
+        desc: "Help client teams administer compatible integrations, data mappings and system connections across selected environments.",
       },
       {
-        icon: "⚡",
-        title: "Handle 10,000 Customers in 1 Minute",
-        desc: "The system processes at extremely high speeds, handling over 10,000 customer inquiries per minute, significantly increasing customer service efficiency.",
+        icon: "🛡️",
+        title: "Model Governance Tooling",
+        desc: "Configurable documentation, alerts and approval controls can support a client's internal model-governance processes.",
       },
       {
-        icon: "💯",
-        title: "Save 80% of Staff",
-        desc: "By automating customer service tasks, the system reduces significant labor costs, allowing businesses to allocate human resources to more valuable work.",
-      },
-      {
-        icon: "❤️",
-        title: "Enhance Customer Satisfaction",
-        desc: "Quick and accurate responses improve customer satisfaction and enhance brand image.",
-      },
-      {
-        icon: "🕐",
-        title: "24/7 Service",
-        desc: "Available 24/7, providing uninterrupted service to customers, enhancing their experience.",
-      },
-      {
-        icon: "🌐",
-        title: "Expand Service Reach",
-        desc: "The system can handle customer inquiries from multiple channels, expanding the reach of a business's services.",
+        icon: "🏗️",
+        title: "Client-Deployed Architecture",
+        desc: "Software can be deployed within a client-controlled environment, with business use, user access and operating decisions managed independently by that client.",
       },
     ],
     footer:
-      "The Darkhaven AI Customer Service System is a powerful, efficient, and cost-effective customer service solution that helps businesses improve customer satisfaction, reduce operational costs, and increase efficiency. By leveraging advanced AI technology, the system can handle customer inquiries around the clock and provide comprehensive customer support for companies.",
+      "This page describes business-to-business technology services. Darkhaven does not provide investment advice, make or endorse recommendations or selections relating to securities or other financial instruments, manage portfolios or assets, execute transactions, or accept, hold or transfer customer funds or digital assets.",
+  },
+    {
+    id: "ai-stock-selection",
+    nav: "Quantitative Research & Workflow Infrastructure",
+    title: "Quantitative Research & Workflow Infrastructure",
+    description:
+      "Darkhaven builds configurable, client-deployed software infrastructure for business clients that require structured data analysis, model governance and operational workflow support. The technology supports client-defined data inputs, analytical parameters, review controls and scheduled processing within independently operated client environments. Each client remains solely responsible for its own permitted use cases, regulatory obligations, operational decisions and customer-facing activities.",
+    features: [
+      {
+        icon: "🗂️",
+        title: "Historical Data Processing",
+        desc: "Organize and process client-authorized historical datasets within client-defined analytical workflows.",
+      },
+      {
+        icon: "🔗",
+        title: "Cross-Source Data Mapping",
+        desc: "Configure data mapping and comparison logic across selected client-authorized data sources and technical environments.",
+      },
+      {
+        icon: "📐",
+        title: "Configurable Quantitative Models",
+        desc: "Provide a framework through which clients can configure, test, document and review their own analytical models and parameters.",
+      },
+      {
+        icon: "🤖",
+        title: "Scheduled Workflow Automation",
+        desc: "Support repeatable, client-defined processing tasks, notifications and administrative workflows based on approved configurations.",
+      },
+      {
+        icon: "🛡️",
+        title: "Client-Defined Control Frameworks",
+        desc: "Enable clients to configure review stages, approval rules, access permissions and internal governance controls.",
+      },
+      {
+        icon: "📊",
+        title: "Scenario & Sensitivity Analysis",
+        desc: "Support internal scenario review and parameter testing using client-selected assumptions, datasets and analytical settings.",
+      },
+      {
+        icon: "📡",
+        title: "Data Quality Monitoring",
+        desc: "Provide tools that help client teams monitor data availability, processing status and configuration changes across approved workflows.",
+      },
+      {
+        icon: "📋",
+        title: "Review & Audit Records",
+        desc: "Maintain configurable logs, version histories and documentation records to support client-defined review processes.",
+      },
+      {
+        icon: "👥",
+        title: "Role-Based Administration",
+        desc: "Apply client-defined roles, permissions and segregation-of-responsibility settings for authorized teams.",
+      },
+      {
+        icon: "🧩",
+        title: "Modular Deployment Architecture",
+        desc: "Deploy modular components within a client-controlled environment, subject to each client's integration, governance and infrastructure requirements.",
+      },
+    ],
+    footer:
+      "Darkhaven provides software and technical services only. It does not provide investment advice, create or endorse trading strategies, make investment or trading decisions, operate a trading venue, execute or route transactions, manage accounts or assets, custody funds or digital assets, or offer services directly to retail users.",
+  },
+   {
+    id: "futures-arbitrage",
+    nav: "AI-Enabled Workflow & Analytics Infrastructure",
+    title: "AI-Enabled Workflow & Analytics Infrastructure",
+    description:
+      "Darkhaven builds configurable, client-deployed software infrastructure for qualified business clients. The technology supports client-defined data processing, analytical workflows, model configuration and technical administration across selected, client-authorized third-party environments. Each client independently determines its permitted use cases, operational controls, regulatory responsibilities and customer-facing activities.",
+    features: [
+      {
+        icon: "🤖",
+        title: "AI & Machine Learning Tooling",
+        desc: "Configurable AI and machine-learning tools support data processing, model testing and analytical workflows within a client-controlled environment.",
+      },
+      {
+        icon: "⚙️",
+        title: "Client-Defined Workflow Automation",
+        desc: "Support scheduled, repeatable data-processing and administrative workflows based on configurations established and overseen by the client.",
+      },
+      {
+        icon: "🧩",
+        title: "Modular Workflow Configuration",
+        desc: "Flexible modules allow clients to configure parameters, permissions, review stages and internal workflow logic according to their own requirements.",
+      },
+      {
+        icon: "🛡️",
+        title: "Governance & Approval Controls",
+        desc: "Configure access roles, approval paths and review procedures to support a client's internal governance framework.",
+      },
+      {
+        icon: "☁️",
+        title: "Cloud Deployment Options",
+        desc: "Deployment options can be configured around a client's selected cloud environment, technical requirements and data-governance arrangements.",
+      },
+      {
+        icon: "📋",
+        title: "Model Versioning & Documentation",
+        desc: "Maintain configurable records of model versions, workflow changes, analytical parameters and related internal documentation.",
+      },
+      {
+        icon: "📡",
+        title: "Data & System Monitoring",
+        desc: "Help authorized client teams review data availability, processing status, system events and configuration updates across approved workflows.",
+      },
+      {
+        icon: "⏳",
+        title: "Operational Efficiency Tools",
+        desc: "Task coordination and automation features help authorized teams manage repeatable internal processes in a more structured manner.",
+      },
+      {
+        icon: "🕐",
+        title: "Scheduling & Status Visibility",
+        desc: "Support planned processing schedules, workflow status views and technical administration under the applicable client deployment arrangement.",
+      },
+    ],
+    footer:
+      "Darkhaven provides software and technical support only. It does not provide investment advice, create or endorse trading strategies, execute transactions, operate customer accounts, manage assets, custody funds or digital assets, or provide services directly to retail users.",
+  },
+
+   {
+    id: "ai-customer-service",
+    nav: "AI Customer Service & Workflow Software",
+    title: "AI Customer Service & Workflow Software",
+    description:
+      "Darkhaven builds configurable AI-powered customer service and workflow software for business clients. The software can support client-defined knowledge bases, communication workflows, inquiry classification and service-routing processes across approved customer channels. Each client controls its own content, permissions, customer communications, data practices and operational decisions.",
+    features: [
+      {
+        icon: "🤖",
+        title: "AI-Assisted Response Workflows",
+        desc: "Configurable language-model tooling can help client teams structure response drafts, classify inquiries and support approved service workflows.",
+      },
+      {
+        icon: "⚡",
+        title: "Scalable Inquiry Handling",
+        desc: "The system is designed to support configurable volumes of customer inquiries, subject to deployment architecture, connected services and client-defined workflows.",
+      },
+      {
+        icon: "⚙️",
+        title: "Workflow Automation Tools",
+        desc: "Automate selected routine tasks such as routing, tagging, status updates and knowledge-base retrieval within client-approved processes.",
+      },
+      {
+        icon: "🧑‍💼",
+        title: "Human Review & Escalation",
+        desc: "Configure escalation paths, review queues and handoff rules so complex, sensitive or regulated inquiries can be directed to authorized client personnel.",
+      },
+      {
+        icon: "🕐",
+        title: "Availability Configuration",
+        desc: "Clients can configure service schedules, channels and escalation coverage according to their own operational requirements.",
+      },
+      {
+        icon: "🌐",
+        title: "Multi-Channel Integration",
+        desc: "Connect approved communication channels and customer-service tools within a client-managed environment, subject to available integrations.",
+      },
+    ],
+    footer:
+      "Darkhaven provides software and technical support only. Clients remain responsible for the accuracy of customer-facing content, applicable consent requirements, data protection obligations and human review processes.",
   },
 ];
 
@@ -477,7 +479,7 @@ export default function PlatformsPage() {
                     : "bg-slate-100 text-text-dark-3 hover:bg-slate-200"
                 }`}
               >
-                {s.nav}
+                {s.title}
               </button>
             ))}
           </div>
@@ -515,9 +517,7 @@ export default function PlatformsPage() {
               <section key={section.id} id={section.id} className="scroll-mt-28">
                 {/* Section Header */}
                 <div className="mb-8 sm:mb-10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue/[0.08] border border-blue/15 mb-4">
-                    <span className="text-xs font-semibold text-blue uppercase tracking-wide">{section.subtitle}</span>
-                  </div>
+                
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-dark mb-4 leading-tight">
                     {section.title}
                   </h2>
